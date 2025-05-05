@@ -1,601 +1,1640 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
+<html lang="en">
+
 <head>
-  <!-- Meta Tags -->
-  <meta charset="utf-8">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="author" content="">
-  <!-- Page Title -->
-  <title>Nischinto - Medical landing page HTML template</title>
-  <!-- Favicon Icon -->
-  <link rel="icon" href="assets/img/favicon.png" />
-  <!-- Stylesheets -->
-  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
-  <link rel="stylesheet" href="assets/css/fontawesome.css" />
-  <link rel="stylesheet" href="assets/css/slick.css" />
-  <link rel="stylesheet" href="assets/css/lightgallery.min.css" />
-  <link rel="stylesheet" href="assets/css/animate.css" />
-  <link rel="stylesheet" href="assets/css/jQueryUi.min.css" />
-  <link rel="stylesheet" href="assets/css/textRotate.css" />
-  <link rel="stylesheet" href="assets/css/select2.min.css" />
-  <link rel="stylesheet" href="assets/css/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mana Vascular Centre</title>
+
+    <style>
+        /* Basic Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+       
+
+        body {
+  font-family: 'YourFontName', sans-serif;
+}
+
+
+        /* Header styles */
+        header {
+            width: 100%;
+            background: #ffffff;
+            display: flex;
+            justify-content: center;
+            /* center the header content */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 1000;
+            padding: 10px 0;
+            /* remove side padding */
+        }
+
+        .header-container {
+            width: 100%;
+            max-width: 1200px;
+            /* set maximum width */
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 20px;
+            /* inner padding */
+        }
+
+        .logo img {
+            max-height: 50px;
+            width: auto;
+        }
+
+        nav {
+            display: flex;
+            flex: 1;
+            justify-content: center;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+            align-items: center;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 16px;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #22699c;
+        }
+
+        .call-btn {
+            background: #e41f27;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        /* Hamburger and mobile menu */
+        .menu-toggle {
+            display: none;
+            font-size: 28px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: #333;
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            background: #fff;
+            padding: 20px;
+            flex-direction: column;
+            z-index: 9999;
+            overflow-y: auto;
+            transition: all 0.3s ease;
+        }
+
+        .mobile-menu.show {
+            display: flex;
+        }
+
+        .mobile-menu .logo {
+            margin-bottom: 20px;
+        }
+
+        .mobile-menu .close-btn {
+            align-self: flex-end;
+            font-size: 28px;
+            cursor: pointer;
+            margin-bottom: 20px;
+            background: none;
+            border: none;
+        }
+
+        .mobile-menu ul {
+            list-style: none;
+            width: 100%;
+        }
+
+        .mobile-menu ul li {
+            margin: 15px 0;
+            text-align: center;
+        }
+
+        .mobile-menu ul li a {
+            text-decoration: none;
+            color: #333;
+            font-size: 20px;
+            font-weight: 500;
+        }
+
+        /* Mobile responsive */
+        @media (max-width: 768px) {
+
+            nav,
+            .call-btn {
+                display: none;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+
+            .header-container {
+                justify-content: space-between;
+            }
+        }
+
+         /* Banner Styles */
+    .banner {
+      width: 100%;
+      height: 100vh;
+      background: url('./assets/banner.png') no-repeat center center;
+      background-size: cover;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 0 8%;
+      position: relative;
+    }
+    
+    .banner-content {
+      max-width: 600px;
+      color: #333;
+    }
+    
+    .banner-content h4 {
+      color: #000;
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 1px;
+      margin-bottom: 15px;
+    }
+    
+    .banner-content h1 {
+      color: #e41f27;
+      font-size: 50px;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+    
+    .banner-content h1 span {
+      color: #333;
+    }
+    
+    .banner-content p {
+      color: #555;
+      font-size: 18px;
+      margin-bottom: 30px;
+      line-height: 1.6;
+    }
+    
+    .banner-buttons {
+      display: flex;
+      gap: 20px;
+      margin-top: 10px;
+    }
+    
+    .banner-buttons a {
+      text-decoration: none;
+      padding: 12px 30px;
+      border-radius: 30px;
+      font-weight: 600;
+      font-size: 16px;
+      transition: all 0.3s ease;
+    }
+    
+    .btn-red {
+      background-color: #e41f27;
+      color: white;
+    }
+    
+    .btn-blue {
+      background-color: #22699c;
+      color: white;
+    }
+    
+    .btn-red:hover, .btn-blue:hover {
+      opacity: 0.85;
+      transform: scale(1.05);
+    }
+    
+    /* Tablet Responsive */
+    @media (max-width: 991px) {
+      .banner {
+        height: auto;
+        padding: 80px 5%;
+        background-position: center top;
+      }
+    
+      .banner-content {
+        max-width: 100%;
+        text-align: center;
+      }
+    
+      .banner-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+    
+      .banner-content h1 {
+        font-size: 40px;
+      }
+    
+      .banner-content p {
+        font-size: 16px;
+      }
+    }
+    
+    /* Mobile Responsive */
+    @media (max-width: 576px) {
+      .banner {
+        height: auto;
+        padding: 60px 20px;
+        background-position: center top;
+      }
+    
+      .banner-content h4 {
+        font-size: 14px;
+      }
+    
+      .banner-content h1 {
+        font-size: 32px;
+        line-height: 1.3;
+      }
+    
+      .banner-content p {
+        font-size: 15px;
+      }
+    
+      .banner-buttons {
+        flex-direction: column;
+        gap: 15px;
+      }
+    
+      .banner-buttons a {
+        width: 100%;
+        text-align: center;
+      }
+    }
+
+    .vein-section {
+  background-color: #e41f27;
+  padding: 60px 20px;
+  text-align: center;
+  color: #fff;
+}
+
+.vein-heading h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.vein-heading p {
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 50px;
+}
+
+.vein-cards {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.vein-card {
+  background-color: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  width: 300px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  text-align: center;
+  color: #333;
+  transition: 0.3s ease;
+}
+
+.vein-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.vein-card h3 {
+  font-size: 22px;
+  font-weight: 700;
+  margin: 20px 0 10px;
+}
+
+.vein-card p {
+  font-size: 16px;
+  padding: 0 20px 20px;
+  line-height: 1.6;
+}
+
+.vein-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Responsive Tablet */
+@media (max-width: 991px) {
+  .vein-heading h2 {
+    font-size: 28px;
+  }
+
+  .vein-heading p {
+    font-size: 16px;
+  }
+
+  .vein-cards {
+    gap: 20px;
+  }
+}
+
+/* Responsive Mobile */
+@media (max-width: 576px) {
+  .vein-heading h2 {
+    font-size: 24px;
+  }
+
+  .vein-heading p {
+    font-size: 15px;
+  }
+
+  .vein-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .vein-card {
+    width: 90%;
+  }
+}
+
+/* Counter Section Styles */
+.counter-section {
+  background: #ffffff;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.counter-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.counter-box {
+  flex: 1 1 200px;
+  min-width: 150px;
+}
+
+.counter-box h2 {
+  font-size: 48px;
+  font-weight: bold;
+  color: #143D63;
+}
+
+.counter-box p {
+  font-size: 16px;
+  color: #333;
+  margin-top: 10px;
+}
+
+.divider {
+  width: 2px;
+  height: 70px;
+  background-color: #e41f27;
+}
+
+/* Tablet Responsive */
+@media (max-width: 991px) {
+  .counter-box h2 {
+    font-size: 40px;
+  }
+
+  .divider {
+    height: 50px;
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 576px) {
+  .counter-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .divider {
+    display: none;
+  }
+
+  .counter-box h2 {
+    font-size: 36px;
+  }
+}
+
+.veins-offer {
+  background-color: #c7e9f7;
+  padding: 60px 20px;
+}
+.veins-offer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+.veins-offer-image {
+  flex: 1 1 40%;
+  display: flex;
+  justify-content: center;
+}
+.veins-offer-image img {
+  width: 85%;
+  max-width: 350px;
+  border-radius: 50%; /* Keep round shape if needed */
+}
+.veins-offer-content {
+  flex: 1 1 50%;
+  text-align: left;
+}
+.veins-offer-content h2 {
+  font-size: 32px;
+  color: #143D63;
+  margin-bottom: 20px;
+  line-height: 1.3;
+  font-family: 'Montserrat', sans-serif;
+}
+.veins-offer-content h2 span {
+  font-weight: bold;
+}
+.veins-offer-prices p {
+  font-size: 20px;
+  margin: 8px 0;
+  font-family: 'Montserrat', sans-serif;
+}
+.highlight {
+  color: #e41f27;
+  font-weight: bold;
+}
+.veins-offer-icons {
+  display: flex;
+  gap: 20px;
+  margin: 20px 0;
+}
+.icon-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.icon-item img {
+  width: 24px;
+  height: 24px;
+}
+.icon-item p {
+  font-size: 16px;
+  color: #333;
+  font-family: 'Montserrat', sans-serif;
+}
+.veins-offer-btn {
+  display: inline-block;
+  padding: 12px 30px;
+  background-color: #e41f27;
+  color: #fff;
+  border-radius: 30px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  margin-top: 20px;
+  font-family: 'Montserrat', sans-serif;
+  transition: all 0.3s ease;
+}
+.veins-offer-btn:hover {
+  background-color: #c62828;
+}
+/* Tablet Responsive */
+@media (max-width: 991px) {
+  .veins-offer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .veins-offer-content {
+    text-align: center;
+  }
+  .veins-offer-icons {
+    justify-content: center;
+  }
+}
+/* Mobile Responsive */
+@media (max-width: 576px) {
+  .veins-offer-image img {
+    width: 70%;
+  }
+  .veins-offer-content h2 {
+    font-size: 26px;
+  }
+  .veins-offer-prices p {
+    font-size: 18px;
+  }
+  .icon-item p {
+    font-size: 14px;
+  }
+  .veins-offer-btn {
+    padding: 10px 25px;
+    font-size: 15px;
+  }
+}
+
+.insurance-section {
+  padding: 60px 20px;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+.insurance-section h2 {
+  font-size: 32px;
+  color: #143D63;
+  font-weight: bold;
+  margin-bottom: 40px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.insurance-logos {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.insurance-logo {
+  width: 130px;
+  height: 130px;
+  background-color: #c7e9f7;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.insurance-logo img {
+  max-width: 70%;
+  max-height: 70%;
+  object-fit: contain;
+}
+
+/* Tablet View */
+@media (max-width: 991px) {
+  .insurance-logo {
+    width: 110px;
+    height: 110px;
+  }
+}
+
+/* Mobile View */
+@media (max-width: 576px) {
+  .insurance-logos {
+    gap: 20px;
+  }
+  .insurance-logo {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+.appointment-section {
+  background-color: #e5e5e5;
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.appointment-container {
+  max-width: 900px;
+  width: 100%;
+}
+
+.appointment-container h2 {
+  text-align: center;
+  font-size: 36px;
+  color: #e41f27;
+  margin-bottom: 40px;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+
+.appointment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.form-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.form-group {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 8px;
+  font-family: 'Montserrat', sans-serif;
+}
+
+.form-group input,
+.form-group textarea {
+  padding: 12px 15px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-family: 'Montserrat', sans-serif;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.form-group textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.full-width {
+  width: 100%;
+}
+
+/* Responsive Tablet */
+@media (max-width: 991px) {
+  .form-row {
+    flex-direction: column;
+  }
+}
+
+/* Responsive Mobile */
+@media (max-width: 576px) {
+  .appointment-container h2 {
+    font-size: 28px;
+  }
+}
+
+
+/* .success-stories-section */
+.success-stories-section {
+  background-color: #143D63;
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.success-stories-section h2 {
+  font-size: 40px;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  margin-bottom: 60px;
+  line-height: 1.2;
+}
+
+.stories-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.story-card {
+  background-color: #ffffff;
+  border-radius: 20px;
+  width: 300px;
+  padding: 30px 20px 40px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.story-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+.story-card h3 {
+  color: #e41f27;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: 'Montserrat', sans-serif;
+  margin-bottom: 15px;
+}
+
+.story-card p {
+  font-size: 16px;
+  color: #333;
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.5;
+}
+
+/* Tablet Responsive */
+@media (max-width: 991px) {
+  .stories-container {
+    gap: 20px;
+  }
+  .story-card {
+    width: 260px;
+  }
+}
+
+/* Mobile Responsive */
+@media (max-width: 576px) {
+  .stories-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .story-card {
+    width: 90%;
+    padding: 30px 15px 40px;
+  }
+  .success-stories-section h2 {
+    font-size: 32px;
+  }
+}
+
+/*faq*/
+
+.faq-section {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 60px 80px;
+    gap: 60px;
+    flex-direction: row;
+  }
+
+  .faq-image {
+    max-width: 520px;
+    width: 100%;
+    height: 480px;
+  }
+
+  .faq-container {
+    background: rgba(255, 255, 255, 0.96);
+    border-radius: 16px;
+    padding: 40px 30px;
+    max-width: 700px;
+    width: 100%;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
+  }
+
+  .faq-heading {
+    color: #d50000;
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    line-height: 1.2;
+  }
+
+  .faq-item {
+    margin-bottom: 10px;
+  }
+
+  .faq-box {
+    background: #fff;
+    border-radius: 12px;
+    padding: 14px 18px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+  .faq-box:hover {
+    background: #f9f9f9;
+  }
+
+  .faq-question {
+    font-size: 15px;
+    color: #333;
+    margin: 0;
+    flex: 1;
+  }
+
+  .faq-icon {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+  }
+
+  .faq-answer {
+    background-color: #ffffff;
+    border-left: 3px solid #d50000;
+    padding: 12px 18px;
+    margin-top: 8px;
+    margin-bottom: 16px;
+    display: none;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    color: #444;
+  }
+
+  @media (max-width: 1024px) {
+    .faq-section {
+      flex-direction: column;
+      padding: 50px 40px;
+      text-align: center;
+    }
+
+    .faq-image {
+      max-width: 300px;
+    }
+
+    .faq-container {
+      max-width: 100%;
+      padding: 30px 25px;
+    }
+
+    .faq-heading {
+      font-size: 28px;
+      text-align: center;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .faq-section {
+      flex-direction: column;
+      padding: 40px 20px;
+    }
+
+    .faq-container {
+      padding: 25px 20px;
+    }
+
+    .faq-heading {
+      font-size: 24px;
+    }
+
+    .faq-icon {
+      margin-left: 10px;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .faq-heading {
+      font-size: 22px;
+    }
+
+    .faq-box {
+      font-size: 14px;
+    }
+
+    .faq-image {
+      max-width: 440px;
+    }
+  }
+
+  /*Address */
+  
+  .contact-section {
+      padding: 2rem 1rem;
+      text-align: center;
+    }
+
+    .location-icon img {
+      width: 40px;
+      height: 40px;
+      margin-right: 1rem;
+    }
+
+    .info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 1.5rem;
+    }
+
+    .center-name {
+      font-size: 2rem;
+      font-weight: 600;
+      color: #e0203b;
+      margin: 0.5rem 0;
+    }
+
+    .address {
+      font-size: 1rem;
+      line-height: 1.5;
+      color: #333;
+    }
+
+    .phone {
+      font-size: 1.5rem;
+      font-weight: 500;
+      color: #e0203b;
+      margin: 1rem 0;
+    }
+
+    .map-container {
+      width: 100%;
+      max-width: 835px;
+      margin: 0 auto;
+    }
+
+    .map-container iframe {
+      width: 100%;
+      height: 410px;
+      border: 1px solid #ccc;
+    }
+
+    footer {
+      background: #0d407d;
+      color: white;
+      text-align: center;
+      padding: 1rem 0;
+      font-size: 0.9rem;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .footer-links a {
+      color: white;
+      text-decoration: none;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #3c5d88;
+      padding-top: 0.5rem;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .footer-bottom a {
+      color: white;
+      text-decoration: none;
+      margin: 0 0.25rem;
+    }
+
+    /* Responsive for desktop/tablet */
+    @media (min-width: 768px) {
+      .contact-section {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-around;
+        text-align: left;
+      }
+
+      .info {
+        flex: 1;
+        align-items: flex-start;
+      }
+
+      .map-container {
+        flex: 1;
+      }
+
+      .footer-bottom {
+        flex-direction: row;
+        justify-content: space-around;
+      }
+    }
+
+  
+.submit-button {
+  background-color: #28a745; /* Green (like a call button) */
+  color: white;
+  padding: 14px 28px;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.submit-button:hover {
+  background-color: #218838;
+  transform: scale(1.03);
+}
+
+.submit-button:active {
+  background-color: #1e7e34;
+  transform: scale(0.98);
+}
+.info-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ 
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+}
+.contact-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 20px;
+  gap: 40px;
+}
+
+.info-wrapper {
+  flex: 1 1 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 280px;
+}
+
+.info {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  max-width: 350px;
+}
+
+.location-icon img {
+  width: 40px;
+  height: 40px;
+}
+
+.center-name {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.address, .phone {
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+/* Map container */
+.map-container {
+  flex: 1 1 400px;
+  min-width: 280px;
+  max-width: 835px;
+}
+
+.map-container iframe {
+  width: 100%;
+  height: 410px;
+  border: none;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .contact-section {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 20px 10px;
+  }
+
+  .info {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .location-icon img {
+    margin-bottom: 10px;
+  }
+
+  .center-name {
+    font-size: 18px;
+  }
+
+  .address, .phone {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .map-container iframe {
+    height: 300px;
+  }
+}
+
+
+
+
+</style>
+   
+
+
 </head>
 
 <body>
-  <div class="st-perloader">
-    <div class="st-perloader-in">
-      <div class="st-wave-first">
-        <svg   enable-background="new 0 0 300.08 300.08" viewBox="0 0 300.08 300.08" xmlns="http://www.w3.org/2000/svg"><g><path d="m293.26 184.14h-82.877l-12.692-76.138c-.546-3.287-3.396-5.701-6.718-5.701-.034 0-.061 0-.089 0-3.369.027-6.199 2.523-6.677 5.845l-12.507 87.602-14.874-148.69c-.355-3.43-3.205-6.056-6.643-6.138-.048 0-.096 0-.143 0-3.39 0-6.274 2.489-6.752 5.852l-19.621 137.368h-9.405l-12.221-42.782c-.866-3.028-3.812-5.149-6.8-4.944-3.13.109-5.777 2.332-6.431 5.395l-8.941 42.332h-73.049c-3.771 0-6.82 3.049-6.82 6.82 0 3.778 3.049 6.82 6.82 6.82h78.566c3.219 0 6.002-2.251 6.67-5.408l4.406-20.856 6.09 21.313c.839 2.939 3.526 4.951 6.568 4.951h20.46c3.396 0 6.274-2.489 6.752-5.845l12.508-87.596 14.874 148.683c.355 3.437 3.205 6.056 6.643 6.138h.143c3.39 0 6.274-2.489 6.752-5.845l14.227-99.599 6.397 38.362c.546 3.287 3.396 5.702 6.725 5.702h88.66c3.771 0 6.82-3.049 6.82-6.82-.001-3.772-3.05-6.821-6.821-6.821z" /></g></svg>
-      </div>
-      <div class="st-wave-second">
-        <svg   enable-background="new 0 0 300.08 300.08" viewBox="0 0 300.08 300.08" xmlns="http://www.w3.org/2000/svg"><g><path d="m293.26 184.14h-82.877l-12.692-76.138c-.546-3.287-3.396-5.701-6.718-5.701-.034 0-.061 0-.089 0-3.369.027-6.199 2.523-6.677 5.845l-12.507 87.602-14.874-148.69c-.355-3.43-3.205-6.056-6.643-6.138-.048 0-.096 0-.143 0-3.39 0-6.274 2.489-6.752 5.852l-19.621 137.368h-9.405l-12.221-42.782c-.866-3.028-3.812-5.149-6.8-4.944-3.13.109-5.777 2.332-6.431 5.395l-8.941 42.332h-73.049c-3.771 0-6.82 3.049-6.82 6.82 0 3.778 3.049 6.82 6.82 6.82h78.566c3.219 0 6.002-2.251 6.67-5.408l4.406-20.856 6.09 21.313c.839 2.939 3.526 4.951 6.568 4.951h20.46c3.396 0 6.274-2.489 6.752-5.845l12.508-87.596 14.874 148.683c.355 3.437 3.205 6.056 6.643 6.138h.143c3.39 0 6.274-2.489 6.752-5.845l14.227-99.599 6.397 38.362c.546 3.287 3.396 5.702 6.725 5.702h88.66c3.771 0 6.82-3.049 6.82-6.82-.001-3.772-3.05-6.821-6.821-6.821z" /></g></svg>
-      </div>
+    <header>
+        <div class="header-container">
+            <div class="logo">
+                <img src="./assets/manam-logo-1.png" alt="Mana Vascular Centre Logo">
+            </div>
+
+            <button class="menu-toggle" onclick="openMenu()">☰</button>
+
+            <nav id="navbar">
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About us</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#faq">FAQs</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+
+            <a href="tel:+917075216093" class="call-btn">+91 70752 16093</a>
+        </div>
+    </header>
+
+
+    <!-- Mobile full-screen menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="logo">
+            <img src="./assets/manam-logo-1.png" alt="Mana Vascular Centre Logo" style="max-height: 50px;">
+        </div>
+        <button class="close-btn" onclick="closeMenu()">×</button>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#testimonials">Testimonials</a></li>
+            <li><a href="#faq">FAQs</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
     </div>
-  </div>
-  <!-- Start Header Section -->
-  <header class="st-site-header st-style1 st-sticky-header">
-    <div class="st-top-header">
-      <div class="container">
-        <div class="st-top-header-in">
-          <ul class="st-top-header-list">            
-            <li>
-              <svg   enable-background="new 0 0 479.058 479.058" viewBox="0 0 479.058 479.058" xmlns="http://www.w3.org/2000/svg"><path d="m434.146 59.882h-389.234c-24.766 0-44.912 20.146-44.912 44.912v269.47c0 24.766 20.146 44.912 44.912 44.912h389.234c24.766 0 44.912-20.146 44.912-44.912v-269.47c0-24.766-20.146-44.912-44.912-44.912zm0 29.941c2.034 0 3.969.422 5.738 1.159l-200.355 173.649-200.356-173.649c1.769-.736 3.704-1.159 5.738-1.159zm0 299.411h-389.234c-8.26 0-14.971-6.71-14.971-14.971v-251.648l199.778 173.141c2.822 2.441 6.316 3.655 9.81 3.655s6.988-1.213 9.81-3.655l199.778-173.141v251.649c-.001 8.26-6.711 14.97-14.971 14.97z"/></svg>
-              <a href="#">manavascularcentre@gmail.com</a></li>
-            <li>
-            <svg   enable-background="new 0 0 512.021 512.021" viewBox="0 0 512.021 512.021" xmlns="http://www.w3.org/2000/svg"><g><path d="m367.988 512.021c-16.528 0-32.916-2.922-48.941-8.744-70.598-25.646-136.128-67.416-189.508-120.795s-95.15-118.91-120.795-189.508c-8.241-22.688-10.673-46.108-7.226-69.612 3.229-22.016 11.757-43.389 24.663-61.809 12.963-18.501 30.245-33.889 49.977-44.5 21.042-11.315 44.009-17.053 68.265-17.053 7.544 0 14.064 5.271 15.645 12.647l25.114 117.199c1.137 5.307-.494 10.829-4.331 14.667l-42.913 42.912c40.482 80.486 106.17 146.174 186.656 186.656l42.912-42.913c3.837-3.837 9.36-5.466 14.667-4.331l117.199 25.114c7.377 1.581 12.647 8.101 12.647 15.645 0 24.256-5.738 47.224-17.054 68.266-10.611 19.732-25.999 37.014-44.5 49.977-18.419 12.906-39.792 21.434-61.809 24.663-6.899 1.013-13.797 1.518-20.668 1.519zm-236.349-479.321c-31.995 3.532-60.393 20.302-79.251 47.217-21.206 30.265-26.151 67.49-13.567 102.132 49.304 135.726 155.425 241.847 291.151 291.151 34.641 12.584 71.867 7.64 102.132-13.567 26.915-18.858 43.685-47.256 47.217-79.251l-95.341-20.43-44.816 44.816c-4.769 4.769-12.015 6.036-18.117 3.168-95.19-44.72-172.242-121.772-216.962-216.962-2.867-6.103-1.601-13.349 3.168-18.117l44.816-44.816z"/><path d="m496.02 272c-8.836 0-16-7.164-16-16 0-123.514-100.486-224-224-224-8.836 0-16-7.164-16-16s7.164-16 16-16c68.381 0 132.668 26.628 181.02 74.98s74.98 112.639 74.98 181.02c0 8.836-7.163 16-16 16z"/><path d="m432.02 272c-8.836 0-16-7.164-16-16 0-88.224-71.776-160-160-160-8.836 0-16-7.164-16-16s7.164-16 16-16c105.869 0 192 86.131 192 192 0 8.836-7.163 16-16 16z"/><path d="m368.02 272c-8.836 0-16-7.164-16-16 0-52.935-43.065-96-96-96-8.836 0-16-7.164-16-16s7.164-16 16-16c70.58 0 128 57.42 128 128 0 8.836-7.163 16-16 16z"/></g></svg>
-              <a href="#">91549 63993</a></li>
-          </ul>
-         
+    <!-- Banner Section -->
+    <section class="banner" id="home">
+        <div class="banner-content">
+            <h4 >ENHANCING VASCULAR HEALTH FOR BETTER LIVING</h4>
+            <h1 >Treat Your Veins,<br><span>Live Fully Healthy Life</span></h1>
+            <p >Focused on excellence and elevating vascular wellness,<br>
+                we are compassionate for distinct needs, guaranteeing optimal comprehensive vein care every time.</p>
+            <div class="banner-buttons">
+              <a href="tel:+917075216093" class="btn-red"> CALL US</a>
+
+                <a href="#services" class="btn-blue" >OUR SERVICES</a>
+            </div>
         </div>
-      </div>
+    </section>
+
+    <!-- Vein Healthcare Section -->
+<section class="vein-section" id="services">
+    <div class="vein-heading">
+      <h2 ">Experience the Unique Vein Healthcare,<br>Just the Way You’ve Envisioned</h2>
+      <p >Committed to better vein health for all,<br>with the service and expertise that meets your needs.</p>
     </div>
-    <div class="st-main-header">
-      <div class="container">
-        <div class="st-main-header-in">
-        
-          <div class="st-main-header-right">
-            <div class="st-nav">
-              <ul class="st-nav-list st-onepage-nav">
-                <li><a href="#home" class="st-smooth-move">Home</a></li>
-                <li><a href="#about" class="st-smooth-move">About</a></li>
-                <li><a href="#treatments" class="st-smooth-move">Treatment</a></li>
-                <li><a href="#faq" class="st-smooth-move">Testimonials</a></li>              
-                <li><a href="#contact" class="st-smooth-move">Contact</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-  <!-- End Header Section -->
-
-  <div class="st-content">
-    <!-- Start Hero Seciton -->
-    <div class="st-height-b125 st-height-lg-b80"></div>
-    <div class="st-hero-wrap st-gray-bg st-dynamic-bg overflow-hidden st-fixed-bg st-bg" data-src="assets/img/hero-bg12.jpg">
-      <div class="animated-icon-wrap">
-        <div class="animated-icon"><i class="fas fa-user-md"></i></div>
-        <div class="animated-icon"><i class="fas fa-heartbeat"></i></div>
-        <div class="animated-icon"><i class="far fa-hospital"></i></div>
-        <div class="animated-icon"><i class="fas fa-medkit"></i></div>
-        <div class="animated-icon"><i class="fas fa-crutch"></i></div>
-        <div class="animated-icon"><i class="fas fa-wheelchair"></i></div>
-        <div class="animated-icon"><i class="fas fa-ambulance"></i></div>
-      </div>
-      <div class="st-hero st-style1 text-center">
-        <div class="container">
-          <div class="st-hero-text">
-            <h1 class="st-hero-title cd-headline clip">
-              Advanced Treatments for 
-              <span class="cd-words-wrapper">
-                <b class="is-visible">Vericose Viens.</b>
-                <b>Spider Viens.</b>
-                <b>Backpain.</b>
-                <b>Neckpain.</b>
-                
-              </span>
-            </h1>
-            <div class="st-hero-subtitle">The art of medicine consists in amusing the patient while nature cures the disease. <br>
-            Treatment without prevention is simply unsustainable.</div>
-            
-            <div class="st-height-b10 st-height-lg-b10"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- End Hero Seciton -->
-
-    <!-- Start Feature Seciton -->
-    
-    <!-- End Feature Seciton -->
-
-    <!-- Start About Seciton -->
-    <section class="st-about-wrap" id="about">
-      <div class="st-shape-bg">
-        <img src="assets/img/shape/about-bg-shape.svg" alt="shape">
-      </div>
-      <div class="st-height-b120 st-height-lg-b50"></div>
-      <div class="container">
-        <div class="st-section-heading st-style1">
-          <h2 class="st-section-heading-title">Who We Are</h2>
-          <div class="st-seperator">
-            <div class="st-seperator-left wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.2s"></div>
-            <div class="st-seperator-center"><img src="assets/img/icons/4.png" alt="icon"></div>
-            <div class="st-seperator-right wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.2s"></div>
-          </div>
-          <div class="st-section-heading-subtitle">A vascular center specializes in diagnosing and treating conditions related to veins and arteries, including:.</div>
-        </div>
-        <div class="st-height-b40 st-height-lg-b40"></div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-7">
-            <div class="st-vertical-middle">
-              <div class="st-vertical-middle-in">
-                <div class="st-text-block st-style1">
-                  <h2 class="st-text-block-title">From diagnostics to long-term management, vascular centers provide holistic care tailored to each patient</h2>
-                  <div class="st-height-b20 st-height-lg-b20"></div>
-                  <div class="st-text-block-text">
-                    <p>Varicose veins are enlarged, swollen, and twisted veins that often appear blue or dark purple. They develop when faulty valves in the veins allow blood to flow backward and pool, causing the veins to bulge. Common symptoms include aching, heaviness, swelling, and skin discoloration, primarily in the legs.</p>
-                    <p>Spider veins are smaller, thin, and red or purple veins that spread out like a spider web, typically appearing on the legs or face. While often cosmetic in nature, they can sometimes indicate underlying venous issues</p>
-                  </div>
-                  <div class="st-height-b25 st-height-lg-b25"></div>
-                </div>
-              </div>
-            </div>
-            <div class="st-height-b0 st-height-lg-b30"></div>
-          </div><!-- .col -->
-          <div class="col-lg-5 wow fadeInRight" data-wow-duration="0.8s" data-wow-delay="0.2s">
-           <img  src="./assets/img/crutches.png" style="height: 450px;" />
-          </div><!-- .col -->
-        </div>
-      </div>
-    </section>
-    <!-- End About Seciton -->
-
-    <!-- Start department Section -->
- 
-    <!-- End department Section -->
-
-    <!-- Start Service Section -->
-   
-    <!-- End Service Section -->
-
-    <!-- Start Team Section -->
-    
-    <section class="st-about-wrap" id="treatments">
-      <div class="st-shape-bg">
-        <img src="assets/img/shape/about-bg-shape.svg" alt="shape">
-      </div>
-      <div class="st-height-b120 st-height-lg-b50"></div>
-      <div class="container">
-        <div class="st-section-heading st-style1">
-          <h2 class="st-section-heading-title"> Treatments</h2>
-          <div class="st-seperator">
-            <div class="st-seperator-left wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.2s"></div>
-            <div class="st-seperator-center"><img src="assets/img/icons/4.png" alt="icon"></div>
-            <div class="st-seperator-right wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.2s"></div>
-          </div>
-        
-        </div>
-        <div class="st-height-b40 st-height-lg-b40"></div>
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-7">
-            <div class="st-vertical-middle">
-              <div class="st-vertical-middle-in">
-                <div class="st-text-block st-style1">
-                  <h2 class="st-text-block-title">Treatment For Vericose Viens</h2>
-                  <div class="st-height-b20 st-height-lg-b20"></div>
-                  <div class="st-text-block-text">
-                    <p>Varicose veins are treated using both conservative and advanced methods, depending on the severity of the condition. Conservative approaches include wearing compression stockings to improve blood flow, regular exercise, elevating legs, and maintaining a healthy weight to reduce pressure on veins. For symptom management, lifestyle changes and over-the-counter pain relievers may suffice in mild cases.</p>
-                    <p>For more severe or persistent varicose veins, minimally invasive procedures are highly effective. These include sclerotherapy, which uses a chemical injection to close veins; endovenous laser therapy (EVLT) and radiofrequency ablation (RFA), both of which use heat to seal affected veins; and ultrasound-guided foam sclerotherapy for deeper veins.</p>
-                  </div>
-                  <div class="st-height-b25 st-height-lg-b25"></div>
-                </div>
-              </div>
-            </div>
-            <div class="st-height-b0 st-height-lg-b30"></div>
-          </div><!-- .col -->
-          <div class="col-lg-5 wow fadeInRight" data-wow-duration="0.8s" data-wow-delay="0.2s">
-           <img  src="./assets/img/vv_img.jpg" style="height: 370px" />
-          </div><!-- .col -->
-        </div>
-      </div>
-    </section>
-    <section class="st-about-wrap" id="about">
-      <div class="st-shape-bg">
-        <img src="assets/img/shape/about-bg-shape.svg" alt="shape">
-      </div>
-      <div class="st-height-b120 st-height-lg-b50"></div>
-      <div class="container">
-       
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-7">
-            <div class="st-vertical-middle">
-              <div class="st-vertical-middle-in">
-                <div class="st-text-block st-style1">
-                  <h2 class="st-text-block-title">Treatment For Spider Viens</h2>
-                  <div class="st-height-b20 st-height-lg-b20"></div>
-                  <div class="st-text-block-text">
-                    <p>Spider veins, medically known as telangiectasias, are small, dilated blood vessels that appear close to the surface of the skin. They often look like thin, web-like patterns, hence their name. These veins are typically red, blue, or purple and are commonly found on the legs, thighs, and face.</p>
-                    <p>Treatment options for spider veins range from lifestyle modifications to medical interventions. Compression stockings, regular exercise, and weight management can improve circulation and reduce their appearance. For more advanced cases, treatments like sclerotherapy, laser therapy, or radiofrequency ablation can effectively close or eliminate the veins. Preventive measures include wearing sunscreen, avoiding long periods of immobility, and maintaining a healthy lifestyle. While these measures can help, spider veins may recur over time, making ongoing care essential for long-term management..</p>
-                  </div>
-                  <div class="st-height-b25 st-height-lg-b25"></div>
-                </div>
-              </div>
-            </div>
-            <div class="st-height-b0 st-height-lg-b30"></div>
-          </div><!-- .col -->
-          <div class="col-lg-5 wow fadeInRight" data-wow-duration="0.8s" data-wow-delay="0.2s">
-           <img  src="./assets/img/spider.jpg" style="height: 370px" />
-          </div><!-- .col -->
-        </div>
-      </div>
-    </section>
-    <section class="st-about-wrap" id="about">
-      <div class="st-shape-bg">
-        <img src="assets/img/shape/about-bg-shape.svg" alt="shape">
-      </div>
-      <div class="st-height-b120 st-height-lg-b50"></div>
-      <div class="container">
-       
-      </div>
-      <div class="container">
-        <div class="row">
-          <div class="col-lg-7">
-            <div class="st-vertical-middle">
-              <div class="st-vertical-middle-in">
-                <div class="st-text-block st-style1">
-                  <h2 class="st-text-block-title">Treatment For Thyroid Nodules</h2>
-                  <div class="st-height-b20 st-height-lg-b20"></div>
-                  <div class="st-text-block-text">
-                    <p>The treatment of thyroid nodules depends on their type, size, and symptoms. Benign and asymptomatic nodules often require no immediate intervention and are managed through periodic monitoring with ultrasound and thyroid function tests. </p>
-                    <p>In cases of large nodules causing compressive symptoms like difficulty swallowing or breathing, or if malignancy is suspected or confirmed, surgical removal (partial or total thyroidectomy) may be necessary. Minimally invasive treatments, such as alcohol ablation or radiofrequency ablation, are also options for benign yet symptomatic nodules. The approach is tailored to the patient's specific condition, and regular follow-ups are critical to monitor any changes in the nodule's behavior or thyroid function.</p>
-                  </div>
-                  <div class="st-height-b25 st-height-lg-b25"></div>
-                </div>
-              </div>
-            </div>
-            <div class="st-height-b0 st-height-lg-b30"></div>
-          </div><!-- .col -->
-          <div class="col-lg-5 wow fadeInRight" data-wow-duration="0.8s" data-wow-delay="0.2s">
-           <img  src="./assets/img/thyroid.jpg" style="height: 370px" />
-          </div><!-- .col -->
-        </div>
-      </div>
-    </section>
-    <!-- End Team Section -->
-    <hr>
-    <!-- Start gallery Section -->
- 
-    <!-- End gallery Section -->
-
-    <!-- Start Before After -->
   
-    <!-- End Before After -->
-
-    <!-- Start Testimonial Seciton -->
-    <section id="faq">
-      <div class="st-height-b120 st-height-lg-b80"></div>
-      <div class="container">
-        <div class="st-section-heading st-style2">
-          <div class="st-section-heading-subtitle wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
-            <span>Testimonial</span></div>
-          <h2 class="st-section-heading-title">All that our clients have <span class="st-light-blue">said</span>
-            <br>about our work</h2>
-        </div>
-        <div class="st-height-b35 st-height-lg-b35"></div>
+    <div class="vein-cards">
+      <div class="vein-card">
+        <img src="./assets/dis1.png" alt="Spider Veins">
+        <h3 >Spider Veins</h3>
+        <p >Spider veins appearance is like spider webs or tree branches and usually develops in legs or face. Treatment is done by Sclerotherapy and Laser therapy.</p>
       </div>
-      <div class="container">
-        <div class="st-slider st-style2 st-pricing-wrap">
-          <div class="slick-container" data-autoplay="0" data-loop="1" data-speed="600" data-center="0"
-            data-slides-per-view="responsive" data-xs-slides="1" data-sm-slides="2" data-md-slides="3"
-            data-lg-slides="3" data-add-slides="3">
-            <div class="slick-wrapper">
-              <div class="slick-slide-in">
-                <div class="st-testimonial st-style1 st-type1 wow fadeInLeft" data-wow-duration="0.8s"
-                  data-wow-delay="0.2s">
-                  <div class="st-testimonial-info">
-                    <div class="st-testimonial-meta">
-                      <h4 class="st-testimonial-name">Aditya Rachakatla</h4>
-
-                    </div>
-                  </div>
-                  <div class="st-testimonial-text">We have seen this from a news channel and
-                    consulted  about my father's Vericos and condition and had a surgery  and the
-                    surgery was performed well </div>
-                  <div class="st-quote"><i class="fas fa-quote-left"></i></div>
-                </div>
-              </div><!-- .slick-slide-in -->
-              <div class="slick-slide-in">
-                <div class="st-testimonial st-style1 st-type1 wow fadeInLeft" data-wow-duration="0.8s"
-                  data-wow-delay="0.2s">
-                  <div class="st-testimonial-info">
-                    <div class="st-testimonial-meta">
-                      <h4 class="st-testimonial-name">Vamsheedhara Rajulu</h4>
-
-                    </div>
-                  </div>
-                  <div class="st-testimonial-text">Heard this place from a friend to get my varicose veins surgery done
-                    . It has been a wonderful and happy experience to take the right decision . Kudos to the whole team
-                    </div>
-                  <div class="st-quote"><i class="fas fa-quote-left"></i></div>
-                </div>
-              </div><!-- .slick-slide-in -->
-              <div class="slick-slide-in">
-                <div class="st-testimonial st-style1 st-type1 wow fadeInLeft" data-wow-duration="0.8s"
-                  data-wow-delay="0.2s">
-                  <div class="st-testimonial-info">
-                    <div class="st-testimonial-meta">
-                      <h4 class="st-testimonial-name">John Kiran</h4>
-
-                    </div>
-                  </div>
-                  <div class="st-testimonial-text">Nice and very experienced treatment, As mentioned ,
-                    treatment procedure is very easy nothing to worry about, I had my vericose vein surgery…..staffing
-                    also very professional.</div>
-                  <div class="st-quote"><i class="fas fa-quote-left"></i></div>
-                </div>
-              </div><!-- .slick-slide-in -->
-
-            </div>
-          </div><!-- .slick-container -->
-          <div class="pagination st-style1 st-flex st-hidden"></div>
-          <!-- If dont need Pagination then add class .st-hidden -->
-          <div class="swipe-arrow st-style1">
-            <!-- If dont need navigation then add class .st-hidden -->
-            <div class="slick-arrow-left"><i class="fa fa-chevron-left"></i></div>
-            <div class="slick-arrow-right"><i class="fa fa-chevron-right"></i></div>
-          </div>
-        </div><!-- .st-slider -->
-      </div>
-      <div class="st-height-b120 st-height-lg-b80"></div>
-    </section>
-    <!-- End Testimonial Seciton -->
-
-    <!-- Start FunFact Aection -->
- 
-    <!-- End FunFact Aection -->
-
-    <!-- Start Pricing Table -->
- 
-    <!-- End Pricing Table -->
-
-    <!-- Start FAQ Section -->
   
-
-    <!-- End FAQ Section -->
-
-    <!-- Start News Letter -->
-
-    <!-- End News Letter -->
-
-    <!-- Start Blog Section -->
-    
-    <!-- End Blog Section -->
-
-    <!-- Start Logo Carousel -->
-
-
-    <div class="st-gray-bg">
-      <div class="st-height-b120 st-height-lg-b80"></div>
-      <div class="container">
-        <div class="st-slider st-style2 st-pricing-wrap">
-          <div class="slick-container" data-autoplay="0" data-loop="1" data-speed="600" data-center="0"  data-slides-per-view="responsive" data-xs-slides="1" data-sm-slides="2" data-md-slides="3" data-lg-slides="4" data-add-slides="5">
-            <div class="slick-wrapper">
-              <div class="slick-slide-in">
-                <div class="st-logo-carousel st-style1 st-orange-box">
-                  <img src="assets/img/client1.png" alt="client1">
-                </div>
-              </div><!-- .slick-slide-in -->
-              <div class="slick-slide-in">
-                <div class="st-logo-carousel st-style1 st-blue-box">
-                  <img src="assets/img/client2.png" alt="client2">
-                </div>
-              </div><!-- .slick-slide-in -->
-              <div class="slick-slide-in">
-                <div class="st-logo-carousel st-style1 st-red-box">
-                  <img src="assets/img/client3.png" alt="client3">
-                </div>
-              </div><!-- .slick-slide-in -->
-              <div class="slick-slide-in">
-                <div class="st-logo-carousel st-style1 st-green-box">
-                  <img src="assets/img/client4.png" alt="client4">
-                </div>
-              </div><!-- .slick-slide-in -->
-              <div class="slick-slide-in">
-                <div class="st-logo-carousel st-style1 st-dip-blue-box">
-                  <img src="assets/img/client5.png" alt="client5">
-                </div>
-              </div><!-- .slick-slide-in -->
-              <div class="slick-slide-in">
-                <div class="st-logo-carousel st-style1 st-orange-box">
-                  <img src="assets/img/client1.png" alt="client1">
-                </div>
-              </div><!-- .slick-slide-in -->
-              <div class="slick-slide-in">
-                <div class="st-logo-carousel st-style1 st-blue-box">
-                  <img src="assets/img/client2.png" alt="client2">
-                </div>
-              </div><!-- .slick-slide-in -->
-              <div class="slick-slide-in">
-                <div class="st-logo-carousel st-style1 st-red-box">
-                  <img src="assets/img/client3.png" alt="client3">
-                </div>
-              </div><!-- .slick-slide-in -->
-              <div class="slick-slide-in">
-                <div class="st-logo-carousel st-style1 st-green-box">
-                  <img src="assets/img/client4.png" alt="client4">
-                </div>
-              </div><!-- .slick-slide-in -->
-              <div class="slick-slide-in">
-                <div class="st-logo-carousel st-style1 st-dip-blue-box">
-                  <img src="assets/img/client5.png" alt="client5">
-                </div>
-              </div><!-- .slick-slide-in -->
-            </div>
-          </div><!-- .slick-container -->
-          <div class="pagination st-style1 st-flex st-hidden"></div> <!-- If dont need Pagination then add class .st-hidden -->
-          <div class="swipe-arrow st-style1"> <!-- If dont need navigation then add class .st-hidden -->
-            <div class="slick-arrow-left"><i class="fa fa-chevron-left"></i></div>
-            <div class="slick-arrow-right"><i class="fa fa-chevron-right"></i></div>
-          </div>
-        </div><!-- .st-slider -->
+      <div class="vein-card">
+        <img src="./assets/dis2.png" alt="Varicose Veins">
+        <h3 >Varicose Veins</h3>
+        <p >Varicose veins resemble as enlarged and twisted veins anywhere in the body, predominantly in the legs. Treatment includes Sclerotherapy, Thermal ablation and Vein stripping.</p>
       </div>
-      <div class="st-height-b120 st-height-lg-b80"></div>
+  
+      <div class="vein-card">
+        <img src="./assets/dis3.png" alt="Leg Ulcers">
+        <h3>Leg Ulcers</h3>
+        <p >Malfunctioning of venous valves, usually of the legs in ankle region gives the condition of leg ulcers as open wounds. Treatment is done by Compression therapy and Surgery.</p>
+      </div>
     </div>
-    <!-- End Logo Carousel -->
+  </section>
 
-    <!-- Start Contact Section -->
-    <section id="contact">
-      <div class="st-height-b120 st-height-lg-b80"></div>
-      <div class="container">
-        <div class="st-section-heading st-style2">
-          <div class="st-section-heading-subtitle wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
-            <span>Contact Us</span></div>
-          
-          
-        </div>
-       
+  <!-- Counter Section -->
+<section class="counter-section" id="about">
+    <div class="counter-container">
+      <div class="counter-box">
+        <h2 ><span class="counter" data-target="98">0</span>%</h2>
+        <p >All Time Patient<br>Satisfaction Rate</p>
       </div>
-      <div class="container">
-        <div class="st-slider st-style2 st-pricing-wrap">
-          <div class="slick-container" data-autoplay="0" data-loop="1" data-speed="600" data-center="0"
-            data-slides-per-view="responsive" data-xs-slides="1" data-sm-slides="2" data-md-slides="3"
-            data-lg-slides="3" data-add-slides="3">
-            <div class="slick-wrapper">
-              <div class="slick-slide-in">
-                <div class="st-testimonial st-style1 st-type1 wow fadeInLeft" data-wow-duration="0.8s"
-                  data-wow-delay="0.2s">
-                  <div class="st-testimonial-info">
-                    <div class="st-testimonial-meta">
-                      <h4 class="st-testimonial-name">Email</h4>
-
-                    </div>
-                  </div>
-                  <div class="st-testimonial-text">manavascularcentre@gmail.com </div>
-                  <div class="st-quote"><i class="fas fa-quote-left"></i></div>
-                </div>
-              </div><!-- .slick-slide-in -->
-             
-              <div class="slick-slide-in">
-                <div class="st-testimonial st-style1 st-type1 wow fadeInLeft" data-wow-duration="0.8s"
-                  data-wow-delay="0.2s">
-                  <div class="st-testimonial-info">
-                    <div class="st-testimonial-meta">
-                      <h4 class="st-testimonial-name">Phone Number</h4>
-
-                    </div>
-                  </div>
-                  <div class="st-testimonial-text">91549 63993</div>
-                  <div class="st-quote"><i class="fas fa-quote-left"></i></div>
-                </div>
-              </div><!-- .slick-slide-in -->
-
-            </div>
-          </div><!-- .slick-container -->
-          <div class="pagination st-style1 st-flex st-hidden"></div>
-          <!-- If dont need Pagination then add class .st-hidden -->
-          <div class="swipe-arrow st-style1">
-            <!-- If dont need navigation then add class .st-hidden -->
-            <div class="slick-arrow-left"><i class="fa fa-chevron-left"></i></div>
-            <div class="slick-arrow-right"><i class="fa fa-chevron-right"></i></div>
-          </div>
-        </div><!-- .st-slider -->
-      </div>
-      <div class="st-height-b120 st-height-lg-b80"></div>
-    </section>
-    <!-- End Contact Section -->
-    
-   
-  </div>
-
   
+      <div class="divider"></div>
+  
+      <div class="counter-box">
+        <h2 ><span class="counter" data-target="4.9">0</span>/5</h2>
+        <p >Star Rating on<br>Google Reviews</p>
+      </div>
+  
+      <div class="divider"></div>
+  
+      <div class="counter-box">
+        <h2 ><span class="counter" data-target="10000">0</span>+</h2>
+        <p >Happy Patients and<br>Still Growing!</p>
+      </div>
+  
+      <div class="divider"></div>
+  
+      <div class="counter-box">
+        <h2 ><span class="counter" data-target="10">0</span>+</h2>
+        <p>Years of Experience in<br>Vein Treatment</p>
+      </div>
+    </div>
+  </section>
 
+  <!-- Varicose Veins Offer Section -->
+<section class="veins-offer">
+    <div class="veins-offer-container">
+      <div class="veins-offer-image">
+        <img src="./assets/dis4.png" alt="Varicose Veins Legs">
+      </div>
+      <div class="veins-offer-content">
+        <h2>Make Your Varicose Veins Legs<br><span>Comfortable Now!</span></h2>
+  
+        <div class="veins-offer-prices">
+          <p><span class="highlight">Single Leg:</span> 55,000/- Rs</p>
+          <p><span class="highlight">Both Legs:</span> 75,000/- Rs</p>
+        </div>
+  
+        <div class="veins-offer-icons">
+          <div class="icon-item">
+            <img src="./assets/icon1.png" alt="No Cuts Icon">
+            <p>No Cuts</p>
+          </div>
+          <div class="icon-item">
+            <img src="./assets/icon2.png" alt="No Stitches Icon">
+            <p>No Stitches</p>
+          </div>
+        </div>
+  
+        <a href="#contact" class="veins-offer-btn">Book Consultation</a>
+      </div>
+    </div>
+  </section>
 
-  <!-- Start Footer -->
-  <footer class="st-site-footer st-sticky-footer st-dynamic-bg" data-src="assets/img/footer-bg.png">
-    <div class="st-main-footer">
-      <div class="container">
-        <div class="row">
-         
-          <div class="col-lg-3">
-            <div class="st-footer-widget">
-              <h2 class="st-footer-widget-title">Useful Links</h2>
-              <ul class="st-footer-widget-nav st-mp0">
-                <li><a href="#"><i class="fas fa-chevron-right"></i>Home</a></li>
-                <li><a href="#"><i class="fas fa-chevron-right"></i>About</a></li>
-                <li><a href="#"><i class="fas fa-chevron-right"></i>Treatments</a></li>
-                <li><a href="#"><i class="fas fa-chevron-right"></i>Testimonials</a></li>
-                <li><a href="#"><i class="fas fa-chevron-right"></i>Contact</a></li>
-              </ul>
-            </div>
-          </div><!-- .col -->
-         
-          <div class="col-lg-3">
-            <div class="st-footer-widget">
-              <h2 class="st-footer-widget-title">Contacts</h2>
-              <ul class="st-footer-contact-list st-mp0">
-                
-                <li><span class="st-footer-contact-title">Email:</span> manavascularcentre@gmail.com</li>
-                <li><span class="st-footer-contact-title">Phone:</span>91549 63993</li>
-              </ul>
-            </div>
-          </div><!-- .col -->
+  <!-- Major Insurances Accepted Section -->
+<section class="insurance-section">
+    <h2>Major Insurances Accepted</h2>
+    <div class="insurance-logos">
+      <div class="insurance-logo">
+        <img src="./assets/digit-insurance 1.png" alt="Digit Insurance">
+      </div>
+      <div class="insurance-logo">
+        <img src="./assets/digit-insurance 2.png" alt="FHPL Insurance">
+      </div>
+      <div class="insurance-logo">
+        <img src="./assets/digit-insurance 3.png" alt="MD India Insurance">
+      </div>
+      <div class="insurance-logo">
+        <img src="./assets/digit-insurance 4.png" alt="HDFC ERGO Insurance">
+      </div>
+      <div class="insurance-logo">
+        <img src="./assets/digit-insurance 5.png" alt="Paramount Health Insurance">
+      </div>
+      <div class="insurance-logo">
+        <img src="./assets/digit-insurance 6.png" alt="ICICI Lombard Insurance">
+      </div>
+    </div>
+  </section>
+
+  <!-- Book an Appointment Section -->
+  <section class="appointment-section" id="contact">
+    <div class="appointment-container">
+      <h2>Book an Appointment</h2>
+  
+      <form
+        id="bookingForm"
+        action="https://docs.google.com/forms/d/e/1FAIpQLSfcmcDJTJsRrcG9SUNCXOJH4_x2edclKkGKNsc5UHGyMrWNug/formResponse"
+        method="POST"
+        onsubmit="setTimeout(function(){ window.location='thank-you.html'; }, 500);">
+  
+        <!-- Row 1: Name + Email -->
+        <div class="form-row">
+          <div class="form-group">
+            <label>Full Name*</label>
+            <input type="text" name="entry.1855433605" placeholder="Full Name*" required />
+          </div>
+          <div class="form-group">
+            <label>Email address*</label>
+            <input type="email" name="entry.963598987" placeholder="Email address*" required />
+          </div>
+        </div>
+        <br>
+  
+        <!-- Row 2: Phone + Location -->
+        <div class="form-row">
+          <div class="form-group">
+            <label>Phone Number*</label>
+            <input type="tel" name="entry.642870666" placeholder="Phone Number*" required />
+          </div>
+          <div class="form-group">
+            <label>Location*</label>
+            <input type="text" name="entry.1403995216" placeholder="Location*" required />
+          </div>
+        </div>
+        <br>
+  
+        <!-- Row 3: Query -->
+        <div class="form-row">
+          <div class="form-group full-width">
+            <label>Your Query*</label>
+            <textarea name="entry.78717058" placeholder="Your Query*" required></textarea>
+          </div>
+        </div>
+        <br>
+  
+        <button type="submit" class="submit-button">Submit
+        </button>
+      </form>
+    </div>
+  </section>
+  
+  
+  
+  
+  
+ 
+
+<!-- Patient Success Stories Section -->
+<section class="success-stories-section" id="testimonials">
+    <h2>Our Patient's<br>Success Stories</h2>
+    <div class="stories-container">
+      <div class="story-card">
+        <img src="./assets/avatar_1 1.png" alt="Pallem Lakshmi" class="story-avatar">
+        <h3>Pallem Lakshmi</h3>
+        <p>Hospital maintains hygienic environment, staff members are good. Especially I thank nurses and supporting members to make me feel comfortable till final discharge. Doctor behaviour was very good.</p>
+      </div>
+  
+      <div class="story-card">
+        <img src="./assets/avatar_1 2.png" alt="Akula Venkat" class="story-avatar">
+        <h3>Akula Venkat</h3>
+        <p>My father's varicose veins condition was very painful and we consulted a doctor about it. We are very happy to say that my father found relief from treatment as it was quick and easy!</p>
+      </div>
+  
+      <div class="story-card">
+        <img src="./assets/avatar_1 3.png" alt="Nanduri Saroja" class="story-avatar">
+        <h3>Nanduri Saroja</h3>
+        <p>Thank you Doctor for making my mother feel relaxed during the complete treatment process. Doctors, nurses, and staff were very kind and helpful throughout the process.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="faq-section" style="background-color: #f0f0f0;" id="faq">
+    <div class="faq-container">
+      <div class="faq-heading">Frequently<br>Asked Questions</div>
+  
+      <div class="faq-item">
+        <div class="faq-box" onclick="toggleAnswer(this)">
+          <p class="faq-question">1. What are the visible signs of unhealthy veins?</p>
+          <img src="https://img.icons8.com/ios-filled/50/fa314a/expand-arrow--v1.png" class="faq-icon" alt="arrow" />
+        </div>
+        <div class="faq-answer">
+          <p>Unhealthy veins can look enlarged or bulging, with a twisted or knotted appearance. They’re usually dark in color and may be accompanied by aching or a heavy feeling in your legs.</p>
+        </div>
+      </div>
+  
+      <div class="faq-item">
+        <div class="faq-box" onclick="toggleAnswer(this)">
+          <p class="faq-question">2. Are varicose veins more common in women?</p>
+          <img src="https://img.icons8.com/ios-filled/50/fa314a/expand-arrow--v1.png" class="faq-icon" alt="arrow" />
+        </div>
+        <div class="faq-answer">
+          <p>Yes, especially due to hormonal factors, pregnancy, and menopause.
+          </p>
+        </div>
+      </div>
+  
+      <div class="faq-item">
+        <div class="faq-box" onclick="toggleAnswer(this)">
+          <p class="faq-question">3. How do I know if I need varicose veins treatment?</p>
+          <img src="https://img.icons8.com/ios-filled/50/fa314a/expand-arrow--v1.png" class="faq-icon" alt="arrow" />
+        </div>
+        <div class="faq-answer">
+          <p>If you experience pain, discomfort, or cosmetic concerns from varicose veins, it’s a good idea to see a veins specialist for a professional evaluation to determine if treatment is necessary.</p>
+        </div>
+      </div>
+  
+      <div class="faq-item">
+        <div class="faq-box" onclick="toggleAnswer(this)">
+          <p class="faq-question">4. Can varicose veins cause leg pain?</p>
+          <img src="https://img.icons8.com/ios-filled/50/fa314a/expand-arrow--v1.png" class="faq-icon" alt="arrow" />
+        </div>
+        <div class="faq-answer">
+          <p>Yes, aching, burning, throbbing, or cramping in the legs are common symptoms.</p>
+        </div>
+      </div>
+  
+      <div class="faq-item">
+        <div class="faq-box" onclick="toggleAnswer(this)">
+          <p class="faq-question">5. Who is at risk of developing varicose veins?</p>
+          <img src="https://img.icons8.com/ios-filled/50/fa314a/expand-arrow--v1.png" class="faq-icon" alt="arrow" />
+        </div>
+        <div class="faq-answer">
+          <p>Risk factors include age, genetics, pregnancy, obesity, standing for long periods, and hormonal changes.
+          </p>
         </div>
       </div>
     </div>
-    <div class="st-copyright-wrap">
-      <div class="container">
-        <div class="st-copyright-in">
-          <div class="st-left-copyright">
-            <div class="st-copyright-text">Copyright 2024. Reserved by manavascularcentre</div>
+  
+    <!-- Right side image -->
+    <img src="assets/FAQ_1.png" alt="FAQ Woman" class="faq-image" />
+  </section>
+
+  <section class="contact-section">
+    <div class="info-wrapper" style="margin-top: 60px;">
+      <div class="info">
+        <div class="location-icon">
+          <img src="./assets/Frame.png" />
+        </div>
+        <div>
+          <div class="center-name" style="font-size: 30px;">Mana Vascular Centre</div>
+          <div class="address">
+            Plot 2/C, BK Guda, Sanjeeva Reddy Nagar,<br>
+            Hyderabad, Telangana 500033
           </div>
-          <div class="st-right-copyright">
-            <div id="st-backtotop"><i class="fas fa-angle-up"></i></div>
-          </div>
+          <div class="phone">+91 70752 16093</div>
         </div>
       </div>
+    </div>
+    
+    <div class="map-container">
+      <iframe
+        width="435"
+        height="410"
+        frameborder="0"
+        style="border:0; width: 100%; max-width: 835px; height: 410px;"
+        src="https://www.google.com/maps?q=Plot+2/C,+BK+Guda,+Sanjeeva+Reddy+Nagar,+Hyderabad,+Telangana+500033&output=embed"
+        allowfullscreen>
+      </iframe>
+    </div>
+    
+  </section>
+
+  <footer>
+    <div class="footer-links">
+      <a href="#home">Home</a>
+      <a href="#about">About us</a>
+      <a href="#services">Services</a>
+      <a href="#testimonials">Testimonials</a>
+      <a href="#faq">FAQs</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="footer-bottom" style="display: flex; justify-content: space-around;">
+      © 2025 Mana Vascular Centre. All Rights Reserved. 
+      <div>
+        <a href="#" style="color: white;">Privacy policy</a> | 
+      <a href="#" style="color: white;">Disclaimer</a> | 
+      <a href="#" style="color: white;">Contact</a>
+      </div>
+      
     </div>
   </footer>
-  <!-- End Footer -->
 
-  <!-- Start Video Popup -->
-  <div class="st-video-popup">
-    <div class="st-video-popup-overlay"></div>
-    <div class="st-video-popup-content">
-      <div class="st-video-popup-layer"></div>
-      <div class="st-video-popup-container">
-        <div class="st-video-popup-align">
-          <div class="embed-responsive embed-responsive-16by9">
-            <iframe class="embed-responsive-item" src="about:blank"></iframe>
-          </div>
-        </div>
-        <div class="st-video-popup-close"></div>
-      </div>
-    </div>
-  </div>
-  <!-- End Video Popup -->
 
-  <!-- Scripts -->
-  <script src="assets/js/vendor/modernizr-3.5.0.min.js"></script>
-  <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
-  <script src="assets/js/isotope.pkg.min.js"></script>
-  <script src="assets/js/jquery.slick.min.js"></script>
-  <script src="assets/js/mailchimp.min.js"></script>
-  <script src="assets/js/counter.min.js"></script>
-  <script src="assets/js/lightgallery.min.js"></script>
-  <script src="assets/js/ripples.min.js"></script>
-  <script src="assets/js/wow.min.js"></script>
-  <script src="assets/js/jQueryUi.js"></script>
-  <script src="assets/js/textRotate.min.js"></script>
-  <script src="assets/js/select2.min.js"></script>
-  <script src="assets/js/main.js"></script>
+
+
+
+  <script>
+    // This must be defined in global scope
+    let submitted = false;
+  </script>
+  
+
+
+  
+  <script>
+    function toggleAnswer(boxElement) {
+      const answer = boxElement.nextElementSibling;
+      if (answer.style.display === 'block') {
+        answer.style.display = 'none';
+      } else {
+        // Close any other open answers
+        document.querySelectorAll('.faq-answer').forEach(el => el.style.display = 'none');
+        answer.style.display = 'block';
+      }
+    }
+  </script>
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+
+  
+
+ 
+  
+  
+<script>
+  const faqBoxes = document.querySelectorAll('.faq-box');
+
+  faqBoxes.forEach(box => {
+    box.addEventListener('click', () => {
+      box.classList.toggle('active');
+    });
+  });
+</script>
+
+  
+  
+  
+
+  <script>
+    const faqItems = document.querySelectorAll('.faq-item');
+    
+    faqItems.forEach(item => {
+      const question = item.querySelector('.faq-question');
+      question.addEventListener('click', () => {
+        item.classList.toggle('active');
+      });
+    });
+    </script>
+    
+  
+
+  <script>
+    const counters = document.querySelectorAll('.counter');
+    
+    counters.forEach(counter => {
+      counter.innerText = '0';
+      const updateCounter = () => {
+        const target = +counter.getAttribute('data-target');
+        const count = +counter.innerText;
+        const increment = target / 100; // Speed of counting
+    
+        if (count < target) {
+          counter.innerText = Math.ceil(count + increment);
+          setTimeout(updateCounter, 30);
+        } else {
+          counter.innerText = target;
+        }
+      };
+      updateCounter();
+    });
+    </script>
+    
+
+    <script>
+        function openMenu() {
+            document.getElementById('mobileMenu').classList.add('show');
+        }
+
+        function closeMenu() {
+            document.getElementById('mobileMenu').classList.remove('show');
+        }
+    </script>
+
 </body>
+
 </html>
