@@ -2,166 +2,170 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mana Vascular Centre</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mana Vascular Centre</title>
+  <link rel="icon" href="assets/manam-logo-1.png" />
 
-    <style>
-        /* Basic Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-       
-
-        body {
-  font-family: 'Montserrat', sans-serif;
-}
-
-
-        /* Header styles */
-       /* HEADER STYLES */
-header {
-    width: 100%;
-    background: #ffffff;
-    display: flex;
-    justify-content: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    position: fixed; /* ✅ changed from relative to fixed */
-    top: 0;           /* ✅ ensures it's stuck to the top */
-    left: 0;          /* ✅ aligns to the left */
-    z-index: 1000;
-    padding: 10px 0;
-}
-
-.header-container {
-    width: 100%;
-    max-width: 1200px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 20px;
-}
-
-.logo img {
-    max-height: 50px;
-    width: auto;
-}
-
-nav {
-    display: flex;
-    flex: 1;
-    justify-content: center;
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-    gap: 30px;
-    align-items: center;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #333;
-    font-size: 16px;
-    font-weight: 500;
-    transition: color 0.3s;
-}
-
-nav ul li a:hover {
-    color: #22699c;
-}
-
-.call-btn {
-    background: #e41f27;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 16px;
-}
-
-/* Hamburger and mobile menu */
-.menu-toggle {
-    display: none;
-    font-size: 28px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #333;
-}
-
-.mobile-menu {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background: #fff;
-    padding: 20px;
-    flex-direction: column;
-    z-index: 9999;
-    overflow-y: auto;
-    transition: all 0.3s ease;
-}
-
-.mobile-menu.show {
-    display: flex;
-}
-
-.mobile-menu .logo {
-    margin-bottom: 20px;
-}
-
-.mobile-menu .close-btn {
-    align-self: flex-end;
-    font-size: 28px;
-    cursor: pointer;
-    margin-bottom: 20px;
-    background: none;
-    border: none;
-}
-
-.mobile-menu ul {
-    list-style: none;
-    width: 100%;
-}
-
-.mobile-menu ul li {
-    margin: 15px 0;
-    text-align: center;
-}
-
-.mobile-menu ul li a {
-    text-decoration: none;
-    color: #333;
-    font-size: 20px;
-    font-weight: 500;
-}
-
-/* Mobile responsive */
-@media (max-width: 768px) {
-
-    nav,
-    .call-btn {
-        display: none;
+  <style>
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
     }
 
-    .menu-toggle {
-        display: block;
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+    }
+
+
+    /* Header styles */
+    /* HEADER STYLES */
+    header {
+      width: 100%;
+      background: #ffffff;
+      display: flex;
+      justify-content: center;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      position: fixed;
+      /* ✅ changed from relative to fixed */
+      top: 0;
+      /* ✅ ensures it's stuck to the top */
+      left: 0;
+      /* ✅ aligns to the left */
+      z-index: 1000;
+      padding: 10px 0;
     }
 
     .header-container {
-        justify-content: space-between;
+      width: 100%;
+      max-width: 1200px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 20px;
     }
-}
+
+    .logo img {
+      max-height: 50px;
+      width: auto;
+    }
+
+    nav {
+      display: flex;
+      flex: 1;
+      justify-content: center;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 30px;
+      align-items: center;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333;
+      font-size: 16px;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #22699c;
+    }
+
+    .call-btn {
+      background: #e41f27;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+    }
+
+    /* Hamburger and mobile menu */
+    .menu-toggle {
+      display: none;
+      font-size: 28px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #333;
+    }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      background: #fff;
+      padding: 20px;
+      flex-direction: column;
+      z-index: 9999;
+      overflow-y: auto;
+      transition: all 0.3s ease;
+    }
+
+    .mobile-menu.show {
+      display: flex;
+    }
+
+    .mobile-menu .logo {
+      margin-bottom: 20px;
+    }
+
+    .mobile-menu .close-btn {
+      align-self: flex-end;
+      font-size: 28px;
+      cursor: pointer;
+      margin-bottom: 20px;
+      background: none;
+      border: none;
+    }
+
+    .mobile-menu ul {
+      list-style: none;
+      width: 100%;
+    }
+
+    .mobile-menu ul li {
+      margin: 15px 0;
+      text-align: center;
+    }
+
+    .mobile-menu ul li a {
+      text-decoration: none;
+      color: #333;
+      font-size: 20px;
+      font-weight: 500;
+    }
+
+    /* Mobile responsive */
+    @media (max-width: 768px) {
+
+      nav,
+      .call-btn {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .header-container {
+        justify-content: space-between;
+      }
+    }
 
 
-         /* Banner Styles */
+    /* Banner Styles */
     .banner {
       width: 100%;
       height: 100vh;
@@ -173,12 +177,12 @@ nav ul li a:hover {
       padding: 0 8%;
       position: relative;
     }
-    
+
     .banner-content {
       max-width: 600px;
       color: #333;
     }
-    
+
     .banner-content h4 {
       color: #000;
       font-size: 18px;
@@ -186,7 +190,7 @@ nav ul li a:hover {
       letter-spacing: 1px;
       margin-bottom: 15px;
     }
-    
+
     .banner-content h1 {
       color: #e41f27;
       font-size: 50px;
@@ -194,24 +198,24 @@ nav ul li a:hover {
       line-height: 1.2;
       margin-bottom: 20px;
     }
-    
+
     .banner-content h1 span {
       color: #333;
     }
-    
+
     .banner-content p {
       color: #555;
       font-size: 18px;
       margin-bottom: 30px;
       line-height: 1.6;
     }
-    
+
     .banner-buttons {
       display: flex;
       gap: 20px;
       margin-top: 10px;
     }
-    
+
     .banner-buttons a {
       text-decoration: none;
       padding: 12px 30px;
@@ -220,22 +224,23 @@ nav ul li a:hover {
       font-size: 16px;
       transition: all 0.3s ease;
     }
-    
+
     .btn-red {
       background-color: #e41f27;
       color: white;
     }
-    
+
     .btn-blue {
       background-color: #22699c;
       color: white;
     }
-    
-    .btn-red:hover, .btn-blue:hover {
+
+    .btn-red:hover,
+    .btn-blue:hover {
       opacity: 0.85;
       transform: scale(1.05);
     }
-    
+
     /* Tablet Responsive */
     @media (max-width: 991px) {
       .banner {
@@ -243,27 +248,27 @@ nav ul li a:hover {
         padding: 80px 5%;
         background-position: center top;
       }
-    
+
       .banner-content {
         max-width: 100%;
         text-align: center;
         margin-top: 140px;
       }
-    
+
       .banner-buttons {
         justify-content: center;
         flex-wrap: wrap;
       }
-    
+
       .banner-content h1 {
         font-size: 40px;
       }
-    
+
       .banner-content p {
         font-size: 16px;
       }
     }
-    
+
     /* Mobile Responsive */
     @media (max-width: 576px) {
       .banner {
@@ -271,25 +276,25 @@ nav ul li a:hover {
         padding: 60px 20px;
         background-position: center top;
       }
-    
+
       .banner-content h4 {
         font-size: 14px;
       }
-    
+
       .banner-content h1 {
         font-size: 32px;
         line-height: 1.3;
       }
-    
+
       .banner-content p {
         font-size: 15px;
       }
-    
+
       .banner-buttons {
         flex-direction: column;
         gap: 15px;
       }
-    
+
       .banner-buttons a {
         width: 100%;
         text-align: center;
@@ -297,637 +302,664 @@ nav ul li a:hover {
     }
 
     .vein-section {
-  background-color: #e41f27;
-  padding: 60px 20px;
-  text-align: center;
-  color: #fff;
-}
-
-.vein-heading h2 {
-  font-size: 32px;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-
-.vein-heading p {
-  font-size: 18px;
-  font-weight: 400;
-  margin-bottom: 50px;
-}
-
-.vein-cards {
-  display: flex;
-  gap: 30px;
-  justify-content: center;
-  flex-wrap: wrap;
-}
-
-.vein-card {
-  background-color: #fff;
-  border-radius: 20px;
-  overflow: hidden;
-  width: 300px;
-  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-  text-align: center;
-  color: #333;
-  transition: 0.3s ease;
-}
-
-.vein-card img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-}
-
-.vein-card h3 {
-  font-size: 22px;
-  font-weight: 700;
-  margin: 20px 0 10px;
-}
-
-.vein-card p {
-  font-size: 16px;
-  padding: 0 20px 20px;
-  line-height: 1.6;
-}
-
-.vein-card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-}
-
-/* Responsive Tablet */
-@media (max-width: 991px) {
-  .vein-heading h2 {
-    font-size: 28px;
-  }
-
-  .vein-heading p {
-    font-size: 16px;
-  }
-
-  .vein-cards {
-    gap: 20px;
-  }
-}
-
-/* Responsive Mobile */
-@media (max-width: 576px) {
-  .vein-heading h2 {
-    font-size: 24px;
-  }
-
-  .vein-heading p {
-    font-size: 15px;
-  }
-
-  .vein-cards {
-    flex-direction: column;
-    align-items: center;
-  }
-
-  .vein-card {
-    width: 90%;
-  }
-}
-
-/* Counter Section Styles */
-.counter-section {
-  background: #ffffff;
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.counter-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-
-.counter-box {
-  flex: 1 1 200px;
-  min-width: 150px;
-}
-
-.counter-box h2 {
-  font-size: 48px;
-  font-weight: bold;
-  color: #143D63;
-}
-
-.counter-box p {
-  font-size: 16px;
-  color: #333;
-  margin-top: 10px;
-}
-
-.divider {
-  width: 2px;
-  height: 70px;
-  background-color: #e41f27;
-}
-
-/* Tablet Responsive */
-@media (max-width: 991px) {
-  .counter-box h2 {
-    font-size: 40px;
-  }
-
-  .divider {
-    height: 50px;
-  }
-}
-
-/* Mobile Responsive */
-@media (max-width: 576px) {
-  .counter-container {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .divider {
-    display: none;
-  }
-
-  .counter-box h2 {
-    font-size: 36px;
-  }
-}
-
-.veins-offer {
-  background-color: #c7e9f7;
-  padding: 60px 20px;
-}
-.veins-offer-container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 30px;
-}
-.veins-offer-image {
-  flex: 1 1 40%;
-  display: flex;
-  justify-content: center;
-}
-.veins-offer-image img {
-  width: 85%;
-  max-width: 350px;
-  border-radius: 50%; /* Keep round shape if needed */
-}
-.veins-offer-content {
-  flex: 1 1 50%;
-  text-align: left;
-}
-.veins-offer-content h2 {
-  font-size: 32px;
-  color: #143D63;
-  margin-bottom: 20px;
-  line-height: 1.3;
-  font-family: 'Montserrat', sans-serif;
-}
-.veins-offer-content h2 span {
-  font-weight: bold;
-}
-.veins-offer-prices p {
-  font-size: 20px;
-  margin: 8px 0;
-  font-family: 'Montserrat', sans-serif;
-}
-.highlight {
-  color: #e41f27;
-  font-weight: bold;
-}
-.veins-offer-icons {
-  display: flex;
-  gap: 20px;
-  margin: 20px 0;
-}
-.icon-item {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-}
-.icon-item img {
-  width: 24px;
-  height: 24px;
-}
-.icon-item p {
-  font-size: 16px;
-  color: #333;
-  font-family: 'Montserrat', sans-serif;
-}
-.veins-offer-btn {
-  display: inline-block;
-  padding: 12px 30px;
-  background-color: #e41f27;
-  color: #fff;
-  border-radius: 30px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 16px;
-  margin-top: 20px;
-  font-family: 'Montserrat', sans-serif;
-  transition: all 0.3s ease;
-}
-.veins-offer-btn:hover {
-  background-color: #c62828;
-}
-/* Tablet Responsive */
-@media (max-width: 991px) {
-  .veins-offer-container {
-    flex-direction: column;
-    text-align: center;
-  }
-  .veins-offer-content {
-    text-align: center;
-  }
-  .veins-offer-icons {
-    justify-content: center;
-  }
-}
-/* Mobile Responsive */
-@media (max-width: 576px) {
-  .veins-offer-image img {
-    width: 70%;
-  }
-  .veins-offer-content h2 {
-    font-size: 26px;
-  }
-  .veins-offer-prices p {
-    font-size: 18px;
-  }
-  .icon-item p {
-    font-size: 14px;
-  }
-  .veins-offer-btn {
-    padding: 10px 25px;
-    font-size: 15px;
-  }
-}
-
-.insurance-section {
-  padding: 60px 20px;
-  background-color: #ffffff;
-  text-align: center;
-}
-
-.insurance-section h2 {
-  font-size: 32px;
-  color: #143D63;
-  font-weight: bold;
-  margin-bottom: 40px;
-  font-family: 'Montserrat', sans-serif;
-}
-
-.insurance-logos {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 30px;
-}
-
-.insurance-logo {
-  width: 130px;
-  height: 130px;
-  background-color: #c7e9f7;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.insurance-logo img {
-  max-width: 70%;
-  max-height: 70%;
-  object-fit: contain;
-}
-
-/* Tablet View */
-@media (max-width: 991px) {
-  .insurance-logo {
-    width: 110px;
-    height: 110px;
-  }
-}
-
-/* Mobile View */
-@media (max-width: 576px) {
-  .insurance-logos {
-    gap: 20px;
-  }
-  .insurance-logo {
-    width: 90px;
-    height: 90px;
-  }
-}
-
-.appointment-section {
-  background-color: #e5e5e5;
-  padding: 60px 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.appointment-container {
-  max-width: 900px;
-  width: 100%;
-}
-
-.appointment-container h2 {
-  text-align: center;
-  font-size: 36px;
-  color: #e41f27;
-  margin-bottom: 40px;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: bold;
-}
-
-.appointment-form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-
-.form-row {
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-.form-group {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.form-group label {
-  font-size: 14px;
-  color: #333;
-  margin-bottom: 8px;
-  font-family: 'Montserrat', sans-serif;
-}
-
-.form-group input,
-.form-group textarea {
-  padding: 12px 15px;
-  font-size: 16px;
-  border-radius: 8px;
-  border: 1px solid #ccc;
-  font-family: 'Montserrat', sans-serif;
-  background: white;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-.form-group textarea {
-  min-height: 150px;
-  resize: vertical;
-}
-
-.full-width {
-  width: 100%;
-}
-
-/* Responsive Tablet */
-@media (max-width: 991px) {
-  .form-row {
-    flex-direction: column;
-  }
-}
-
-/* Responsive Mobile */
-@media (max-width: 576px) {
-  .appointment-container h2 {
-    font-size: 28px;
-  }
-}
-
-
-/* .success-stories-section */
-.success-stories-section {
-  background-color: #143D63;
-  padding: 80px 20px;
-  text-align: center;
-}
-
-.success-stories-section h2 {
-  font-size: 40px;
-  color: #ffffff;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: bold;
-  margin-bottom: 60px;
-  line-height: 1.2;
-}
-
-.stories-container {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-
-.story-card {
-  background-color: #ffffff;
-  border-radius: 20px;
-  width: 300px;
-  padding: 30px 20px 40px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-}
-
-.story-avatar {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-bottom: 20px;
-}
-
-.story-card h3 {
-  color: #e41f27;
-  font-size: 20px;
-  font-weight: bold;
-  font-family: 'Montserrat', sans-serif;
-  margin-bottom: 15px;
-}
-
-.story-card p {
-  font-size: 16px;
-  color: #333;
-  font-family: 'Montserrat', sans-serif;
-  line-height: 1.5;
-}
-
-/* Tablet Responsive */
-@media (max-width: 991px) {
-  .stories-container {
-    gap: 20px;
-  }
-  .story-card {
-    width: 260px;
-  }
-}
-
-/* Mobile Responsive */
-@media (max-width: 576px) {
-  .stories-container {
-    flex-direction: column;
-    align-items: center;
-  }
-  .story-card {
-    width: 90%;
-    padding: 30px 15px 40px;
-  }
-  .success-stories-section h2 {
-    font-size: 32px;
-  }
-}
-
-/*faq*/
-
-.faq-section {
-    display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    padding: 60px 80px;
-    gap: 60px;
-    flex-direction: row;
-  }
-
-  .faq-image {
-    max-width: 520px;
-    width: 100%;
-    height: 480px;
-  }
-
-  .faq-container {
-    background: rgba(255, 255, 255, 0.96);
-    border-radius: 16px;
-    padding: 40px 30px;
-    max-width: 700px;
-    width: 100%;
-    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
-  }
-
-  .faq-heading {
-    color: #d50000;
-    font-size: 32px;
-    font-weight: 700;
-    margin-bottom: 30px;
-    line-height: 1.2;
-  }
-
-  .faq-item {
-    margin-bottom: 10px;
-  }
-
-  .faq-box {
-    background: #fff;
-    border-radius: 12px;
-    padding: 14px 18px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-    transition: background 0.3s ease;
-  }
-
-  .faq-box:hover {
-    background: #f9f9f9;
-  }
-
-  .faq-question {
-    font-size: 15px;
-    color: #333;
-    margin: 0;
-    flex: 1;
-  }
-
-  .faq-icon {
-    width: 20px;
-    height: 20px;
-    margin-left: 10px;
-  }
-
-  .faq-answer {
-    background-color: #ffffff;
-    border-left: 3px solid #d50000;
-    padding: 12px 18px;
-    margin-top: 8px;
-    margin-bottom: 16px;
-    display: none;
-    border-radius: 0 0 12px 12px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-    color: #444;
-  }
-
-  @media (max-width: 1024px) {
-    .faq-section {
-      flex-direction: column;
-      padding: 50px 40px;
+      background-color: #e41f27;
+      padding: 60px 20px;
       text-align: center;
+      color: #fff;
+    }
+
+    .vein-heading h2 {
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+
+    .vein-heading p {
+      font-size: 18px;
+      font-weight: 400;
+      margin-bottom: 50px;
+    }
+
+    .vein-cards {
+      display: flex;
+      gap: 30px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .vein-card {
+      background-color: #fff;
+      border-radius: 20px;
+      overflow: hidden;
+      width: 300px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      color: #333;
+      transition: 0.3s ease;
+    }
+
+    .vein-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .vein-card h3 {
+      font-size: 22px;
+      font-weight: 700;
+      margin: 20px 0 10px;
+    }
+
+    .vein-card p {
+      font-size: 16px;
+      padding: 0 20px 20px;
+      line-height: 1.6;
+    }
+
+    .vein-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Responsive Tablet */
+    @media (max-width: 991px) {
+      .vein-heading h2 {
+        font-size: 28px;
+      }
+
+      .vein-heading p {
+        font-size: 16px;
+      }
+
+      .vein-cards {
+        gap: 20px;
+      }
+    }
+
+    /* Responsive Mobile */
+    @media (max-width: 576px) {
+      .vein-heading h2 {
+        font-size: 24px;
+      }
+
+      .vein-heading p {
+        font-size: 15px;
+      }
+
+      .vein-cards {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .vein-card {
+        width: 90%;
+      }
+    }
+
+    /* Counter Section Styles */
+    .counter-section {
+      background: #ffffff;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .counter-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .counter-box {
+      flex: 1 1 200px;
+      min-width: 150px;
+    }
+
+    .counter-box h2 {
+      font-size: 48px;
+      font-weight: bold;
+      color: #143D63;
+    }
+
+    .counter-box p {
+      font-size: 16px;
+      color: #333;
+      margin-top: 10px;
+    }
+
+    .divider {
+      width: 2px;
+      height: 70px;
+      background-color: #e41f27;
+    }
+
+    /* Tablet Responsive */
+    @media (max-width: 991px) {
+      .counter-box h2 {
+        font-size: 40px;
+      }
+
+      .divider {
+        height: 50px;
+      }
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 576px) {
+      .counter-container {
+        flex-direction: column;
+        gap: 20px;
+      }
+
+      .divider {
+        display: none;
+      }
+
+      .counter-box h2 {
+        font-size: 36px;
+      }
+    }
+
+    .veins-offer {
+      background-color: #c7e9f7;
+      padding: 60px 20px;
+    }
+
+    .veins-offer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .veins-offer-image {
+      flex: 1 1 40%;
+      display: flex;
+      justify-content: center;
+    }
+
+    .veins-offer-image img {
+      width: 85%;
+      max-width: 350px;
+      border-radius: 50%;
+      /* Keep round shape if needed */
+    }
+
+    .veins-offer-content {
+      flex: 1 1 50%;
+      text-align: left;
+    }
+
+    .veins-offer-content h2 {
+      font-size: 32px;
+      color: #143D63;
+      margin-bottom: 20px;
+      line-height: 1.3;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .veins-offer-content h2 span {
+      font-weight: bold;
+    }
+
+    .veins-offer-prices p {
+      font-size: 20px;
+      margin: 8px 0;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .highlight {
+      color: #e41f27;
+      font-weight: bold;
+    }
+
+    .veins-offer-icons {
+      display: flex;
+      gap: 20px;
+      margin: 20px 0;
+    }
+
+    .icon-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .icon-item img {
+      width: 24px;
+      height: 24px;
+    }
+
+    .icon-item p {
+      font-size: 16px;
+      color: #333;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .veins-offer-btn {
+      display: inline-block;
+      padding: 12px 30px;
+      background-color: #e41f27;
+      color: #fff;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 16px;
+      margin-top: 20px;
+      font-family: 'Montserrat', sans-serif;
+      transition: all 0.3s ease;
+    }
+
+    .veins-offer-btn:hover {
+      background-color: #c62828;
+    }
+
+    /* Tablet Responsive */
+    @media (max-width: 991px) {
+      .veins-offer-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .veins-offer-content {
+        text-align: center;
+      }
+
+      .veins-offer-icons {
+        justify-content: center;
+      }
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 576px) {
+      .veins-offer-image img {
+        width: 70%;
+      }
+
+      .veins-offer-content h2 {
+        font-size: 26px;
+      }
+
+      .veins-offer-prices p {
+        font-size: 18px;
+      }
+
+      .icon-item p {
+        font-size: 14px;
+      }
+
+      .veins-offer-btn {
+        padding: 10px 25px;
+        font-size: 15px;
+      }
+    }
+
+    .insurance-section {
+      padding: 60px 20px;
+      background-color: #ffffff;
+      text-align: center;
+    }
+
+    .insurance-section h2 {
+      font-size: 32px;
+      color: #143D63;
+      font-weight: bold;
+      margin-bottom: 40px;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .insurance-logos {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+
+    .insurance-logo {
+      width: 130px;
+      height: 130px;
+      background-color: #c7e9f7;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .insurance-logo img {
+      max-width: 70%;
+      max-height: 70%;
+      object-fit: contain;
+    }
+
+    /* Tablet View */
+    @media (max-width: 991px) {
+      .insurance-logo {
+        width: 110px;
+        height: 110px;
+      }
+    }
+
+    /* Mobile View */
+    @media (max-width: 576px) {
+      .insurance-logos {
+        gap: 20px;
+      }
+
+      .insurance-logo {
+        width: 90px;
+        height: 90px;
+      }
+    }
+
+    .appointment-section {
+      background-color: #e5e5e5;
+      padding: 60px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .appointment-container {
+      max-width: 900px;
+      width: 100%;
+    }
+
+    .appointment-container h2 {
+      text-align: center;
+      font-size: 36px;
+      color: #e41f27;
+      margin-bottom: 40px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: bold;
+    }
+
+    .appointment-form {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .form-row {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .form-group {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .form-group label {
+      font-size: 14px;
+      color: #333;
+      margin-bottom: 8px;
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    .form-group input,
+    .form-group textarea {
+      padding: 12px 15px;
+      font-size: 16px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      font-family: 'Montserrat', sans-serif;
+      background: white;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-group textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    .full-width {
+      width: 100%;
+    }
+
+    /* Responsive Tablet */
+    @media (max-width: 991px) {
+      .form-row {
+        flex-direction: column;
+      }
+    }
+
+    /* Responsive Mobile */
+    @media (max-width: 576px) {
+      .appointment-container h2 {
+        font-size: 28px;
+      }
+    }
+
+
+    /* .success-stories-section */
+    .success-stories-section {
+      background-color: #143D63;
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .success-stories-section h2 {
+      font-size: 40px;
+      color: #ffffff;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: bold;
+      margin-bottom: 60px;
+      line-height: 1.2;
+    }
+
+    .stories-container {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
+    .story-card {
+      background-color: #ffffff;
+      border-radius: 20px;
+      width: 300px;
+      padding: 30px 20px 40px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .story-avatar {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 20px;
+    }
+
+    .story-card h3 {
+      color: #e41f27;
+      font-size: 20px;
+      font-weight: bold;
+      font-family: 'Montserrat', sans-serif;
+      margin-bottom: 15px;
+    }
+
+    .story-card p {
+      font-size: 16px;
+      color: #333;
+      font-family: 'Montserrat', sans-serif;
+      line-height: 1.5;
+    }
+
+    /* Tablet Responsive */
+    @media (max-width: 991px) {
+      .stories-container {
+        gap: 20px;
+      }
+
+      .story-card {
+        width: 260px;
+      }
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 576px) {
+      .stories-container {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .story-card {
+        width: 90%;
+        padding: 30px 15px 40px;
+      }
+
+      .success-stories-section h2 {
+        font-size: 32px;
+      }
+    }
+
+    /*faq*/
+
+    .faq-section {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 60px 80px;
+      gap: 60px;
+      flex-direction: row;
     }
 
     .faq-image {
-      max-width: 300px;
+      max-width: 520px;
+      width: 100%;
+      height: 480px;
     }
 
     .faq-container {
-      max-width: 100%;
-      padding: 30px 25px;
+      background: rgba(255, 255, 255, 0.96);
+      border-radius: 16px;
+      padding: 40px 30px;
+      max-width: 700px;
+      width: 100%;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.1);
     }
 
     .faq-heading {
-      font-size: 28px;
-      text-align: center;
-    }
-  }
-
-  @media (max-width: 768px) {
-    .faq-section {
-      flex-direction: column;
-      padding: 40px 20px;
+      color: #d50000;
+      font-size: 32px;
+      font-weight: 700;
+      margin-bottom: 30px;
+      line-height: 1.2;
     }
 
-    .faq-container {
-      padding: 25px 20px;
-    }
-
-    .faq-heading {
-      font-size: 24px;
-    }
-
-    .faq-icon {
-      margin-left: 10px;
-    }
-  }
-
-  @media (max-width: 480px) {
-    .faq-heading {
-      font-size: 22px;
+    .faq-item {
+      margin-bottom: 10px;
     }
 
     .faq-box {
-      font-size: 14px;
+      background: #fff;
+      border-radius: 12px;
+      padding: 14px 18px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      transition: background 0.3s ease;
     }
 
-    .faq-image {
-      max-width: 440px;
+    .faq-box:hover {
+      background: #f9f9f9;
     }
-  }
 
-  /*Address */
-  
-  .contact-section {
+    .faq-question {
+      font-size: 15px;
+      color: #333;
+      margin: 0;
+      flex: 1;
+    }
+
+    .faq-icon {
+      width: 20px;
+      height: 20px;
+      margin-left: 10px;
+    }
+
+    .faq-answer {
+      background-color: #ffffff;
+      border-left: 3px solid #d50000;
+      padding: 12px 18px;
+      margin-top: 8px;
+      margin-bottom: 16px;
+      display: none;
+      border-radius: 0 0 12px 12px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+      color: #444;
+    }
+
+    @media (max-width: 1024px) {
+      .faq-section {
+        flex-direction: column;
+        padding: 50px 40px;
+        text-align: center;
+      }
+
+      .faq-image {
+        max-width: 300px;
+      }
+
+      .faq-container {
+        max-width: 100%;
+        padding: 30px 25px;
+      }
+
+      .faq-heading {
+        font-size: 28px;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .faq-section {
+        flex-direction: column;
+        padding: 40px 20px;
+      }
+
+      .faq-container {
+        padding: 25px 20px;
+      }
+
+      .faq-heading {
+        font-size: 24px;
+      }
+
+      .faq-icon {
+        margin-left: 10px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .faq-heading {
+        font-size: 22px;
+      }
+
+      .faq-box {
+        font-size: 14px;
+      }
+
+      .faq-image {
+        max-width: 440px;
+      }
+    }
+
+    /*Address */
+
+    .contact-section {
       padding: 2rem 1rem;
       text-align: center;
     }
@@ -1038,269 +1070,273 @@ nav ul li a:hover {
       }
     }
 
-  
-.submit-button {
-  background-color: #28a745; /* Green (like a call button) */
-  color: white;
-  padding: 14px 28px;
-  font-size: 18px;
-  font-weight: 600;
-  border: none;
-  border-radius: 50px;
-  cursor: pointer;
-  box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
-  transition: background-color 0.3s ease, transform 0.2s ease;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-}
 
-.submit-button:hover {
-  background-color: #218838;
-  transform: scale(1.03);
-}
+    .submit-button {
+      background-color: #28a745;
+      /* Green (like a call button) */
+      color: white;
+      padding: 14px 28px;
+      font-size: 18px;
+      font-weight: 600;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 4px 12px rgba(40, 167, 69, 0.3);
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
 
-.submit-button:active {
-  background-color: #1e7e34;
-  transform: scale(0.98);
-}
-.info-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
- 
-}
+    .submit-button:hover {
+      background-color: #218838;
+      transform: scale(1.03);
+    }
 
-.info {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 16px;
-  padding: 20px;
-}
-.contact-section {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 40px 20px;
-  gap: 40px;
-}
+    .submit-button:active {
+      background-color: #1e7e34;
+      transform: scale(0.98);
+    }
 
-.info-wrapper {
-  flex: 1 1 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-width: 280px;
-}
+    .info-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-.info {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  max-width: 350px;
-}
+    }
 
-.location-icon img {
-  width: 40px;
-  height: 40px;
-}
+    .info {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 16px;
+      padding: 20px;
+    }
 
-.center-name {
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 8px;
-}
+    .contact-section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 40px 20px;
+      gap: 40px;
+    }
 
-.address, .phone {
-  font-size: 16px;
-  margin-bottom: 4px;
-}
+    .info-wrapper {
+      flex: 1 1 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-width: 280px;
+    }
 
-/* Map container */
-.map-container {
-  flex: 1 1 400px;
-  min-width: 280px;
-  max-width: 835px;
-}
+    .info {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      max-width: 350px;
+    }
 
-.map-container iframe {
-  width: 100%;
-  height: 410px;
-  border: none;
-}
+    .location-icon img {
+      width: 40px;
+      height: 40px;
+    }
 
-/* Responsive tweaks */
-@media (max-width: 768px) {
-  .contact-section {
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-    padding: 20px 10px;
-  }
+    .center-name {
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
 
-  .info {
-    flex-direction: column;
-    text-align: center;
-  }
+    .address,
+    .phone {
+      font-size: 16px;
+      margin-bottom: 4px;
+    }
 
-  .location-icon img {
-    margin-bottom: 10px;
-  }
+    /* Map container */
+    .map-container {
+      flex: 1 1 400px;
+      min-width: 280px;
+      max-width: 835px;
+    }
 
-  .center-name {
-    font-size: 18px;
-  }
+    .map-container iframe {
+      width: 100%;
+      height: 410px;
+      border: none;
+    }
 
-  .address, .phone {
-    font-size: 15px;
-  }
-}
+    /* Responsive tweaks */
+    @media (max-width: 768px) {
+      .contact-section {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        padding: 20px 10px;
+      }
 
-@media (max-width: 480px) {
-  .map-container iframe {
-    height: 300px;
-  }
-}
+      .info {
+        flex-direction: column;
+        text-align: center;
+      }
 
+      .location-icon img {
+        margin-bottom: 10px;
+      }
 
+      .center-name {
+        font-size: 18px;
+      }
 
+      .address,
+      .phone {
+        font-size: 15px;
+      }
+    }
 
-</style>
-   
+    @media (max-width: 480px) {
+      .map-container iframe {
+        height: 300px;
+      }
+    }
+  </style>
+
 
 
 </head>
 
 <body>
-    <header>
-        <div class="header-container">
-            <div class="logo">
-                <img src="./assets/manam-logo-1.png" alt="Mana Vascular Centre Logo">
-            </div>
+  <header>
+    <div class="header-container">
+      <div class="logo">
+        <img src="./assets/manam-logo-1.png" alt="Mana Vascular Centre Logo">
+      </div>
 
-            <button class="menu-toggle" onclick="openMenu()">☰</button>
+      <button class="menu-toggle" onclick="openMenu()">☰</button>
 
-            <nav id="navbar">
-                <ul>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About us</a></li>
-                    <li><a href="#services">Services</a></li>
-                    <li><a href="#testimonials">Testimonials</a></li>
-                    <li><a href="#faq">FAQs</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                </ul>
-            </nav>
-
-            <a href="tel:+917075216093" class="call-btn">+91 70752 16093</a>
-        </div>
-    </header>
-
-
-    <!-- Mobile full-screen menu -->
-    <div class="mobile-menu" id="mobileMenu">
-        <div class="logo">
-            <img src="./assets/manam-logo-1.png" alt="Mana Vascular Centre Logo" style="max-height: 50px;">
-        </div>
-        <button class="close-btn" onclick="closeMenu()">×</button>
+      <nav id="navbar">
         <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#">About us</a></li>
-            <li><a href="#services">Services</a></li>
-            <li><a href="#testimonials">Testimonials</a></li>
-            <li><a href="#faq">FAQs</a></li>
-            <li><a href="#contact">Contact</a></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About us</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#testimonials">Testimonials</a></li>
+          <li><a href="#faq">FAQs</a></li>
+          <li><a href="#contact">Contact</a></li>
         </ul>
+      </nav>
+
+      <a href="tel:+917075216093" class="call-btn">+91 70752 16093</a>
     </div>
-    <!-- Banner Section -->
-    <section class="banner" id="home">
-        <div class="banner-content">
-            <h4>ENHANCING VASCULAR HEALTH FOR BETTER LIVING</h4>
-            <h1 >Treat Your Veins,<br><span>Live Fully Healthy Life</span></h1>
-            <p >Focused on excellence and elevating vascular wellness,<br>
-                we are compassionate for distinct needs, guaranteeing optimal comprehensive vein care every time.</p>
-            <div class="banner-buttons">
-              <a href="tel:+917075216093" class="btn-red"> CALL US</a>
+  </header>
 
-                <a href="#services" class="btn-blue" >OUR SERVICES</a>
-            </div>
-        </div>
-    </section>
 
-    <!-- Vein Healthcare Section -->
-<section class="vein-section" id="services">
+  <!-- Mobile full-screen menu -->
+  <div class="mobile-menu" id="mobileMenu">
+    <div class="logo">
+      <img src="./assets/manam-logo-1.png" alt="Mana Vascular Centre Logo" style="max-height: 50px;">
+    </div>
+    <button class="close-btn" onclick="closeMenu()">×</button>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#">About us</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#testimonials">Testimonials</a></li>
+      <li><a href="#faq">FAQs</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+  <!-- Banner Section -->
+  <section class="banner" id="home">
+    <div class="banner-content">
+      <h4>ENHANCING VASCULAR HEALTH FOR BETTER LIVING</h4>
+      <h1>Treat Your Veins,<br><span>Live Fully Healthy Life</span></h1>
+      <p>Focused on excellence and elevating vascular wellness,<br>
+        we are compassionate for distinct needs, guaranteeing optimal comprehensive vein care every time.</p>
+      <div class="banner-buttons">
+        <a href="tel:+917075216093" class="btn-red"> CALL US</a>
+
+        <a href="#services" class="btn-blue">OUR SERVICES</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Vein Healthcare Section -->
+  <section class="vein-section" id="services">
     <div class="vein-heading">
       <h2 ">Experience the Unique Vein Healthcare,<br>Just the Way You’ve Envisioned</h2>
       <p >Committed to better vein health for all,<br>with the service and expertise that meets your needs.</p>
     </div>
   
-    <div class="vein-cards">
-      <div class="vein-card">
-        <img src="./assets/dis1.png" alt="Spider Veins">
-        <h3 >Spider Veins</h3>
-        <p >Spider veins appearance is like spider webs or tree branches and usually develops in legs or face. Treatment is done by Sclerotherapy and Laser therapy.</p>
-      </div>
-  
-      <div class="vein-card">
-        <img src="./assets/dis2.png" alt="Varicose Veins">
-        <h3 >Varicose Veins</h3>
-        <p >Varicose veins resemble as enlarged and twisted veins anywhere in the body, predominantly in the legs. Treatment includes Sclerotherapy, Thermal ablation and Vein stripping.</p>
-      </div>
-  
-      <div class="vein-card">
-        <img src="./assets/dis3.png" alt="Leg Ulcers">
-        <h3>Leg Ulcers</h3>
-        <p >Malfunctioning of venous valves, usually of the legs in ankle region gives the condition of leg ulcers as open wounds. Treatment is done by Compression therapy and Surgery.</p>
-      </div>
+    <div class=" vein-cards">
+        <div class="vein-card">
+          <img src="./assets/dis1.png" alt="Spider Veins">
+          <h3>Spider Veins</h3>
+          <p>Spider veins appearance is like spider webs or tree branches and usually develops in legs or face.
+            Treatment is done by Sclerotherapy and Laser therapy.</p>
+        </div>
+
+        <div class="vein-card">
+          <img src="./assets/dis2.png" alt="Varicose Veins">
+          <h3>Varicose Veins</h3>
+          <p>Varicose veins resemble as enlarged and twisted veins anywhere in the body, predominantly in the legs.
+            Treatment includes Sclerotherapy, Thermal ablation and Vein stripping.</p>
+        </div>
+
+        <div class="vein-card">
+          <img src="./assets/dis3.png" alt="Leg Ulcers">
+          <h3>Leg Ulcers</h3>
+          <p>Malfunctioning of venous valves, usually of the legs in ankle region gives the condition of leg ulcers as
+            open wounds. Treatment is done by Compression therapy and Surgery.</p>
+        </div>
     </div>
   </section>
 
   <!-- Counter Section -->
-<section class="counter-section" id="about">
+  <section class="counter-section" id="about">
     <div class="counter-container">
       <div class="counter-box">
-        <h2 ><span class="counter" data-target="98">0</span>%</h2>
-        <p >All Time Patient<br>Satisfaction Rate</p>
+        <h2><span class="counter" data-target="98">0</span>%</h2>
+        <p>All Time Patient<br>Satisfaction Rate</p>
       </div>
-  
+
       <div class="divider"></div>
-  
+
       <div class="counter-box">
-        <h2 ><span class="counter" data-target="4.9">0</span>/5</h2>
-        <p >Star Rating on<br>Google Reviews</p>
+        <h2><span class="counter" data-target="4.9">0</span>/5</h2>
+        <p>Star Rating on<br>Google Reviews</p>
       </div>
-  
+
       <div class="divider"></div>
-  
+
       <div class="counter-box">
-        <h2 ><span class="counter" data-target="10000">0</span>+</h2>
-        <p >Happy Patients and<br>Still Growing!</p>
+        <h2><span class="counter" data-target="10000">0</span>+</h2>
+        <p>Happy Patients and<br>Still Growing!</p>
       </div>
-  
+
       <div class="divider"></div>
-  
+
       <div class="counter-box">
-        <h2 ><span class="counter" data-target="10">0</span>+</h2>
+        <h2><span class="counter" data-target="10">0</span>+</h2>
         <p>Years of Experience in<br>Vein Treatment</p>
       </div>
     </div>
   </section>
 
   <!-- Varicose Veins Offer Section -->
-<section class="veins-offer">
+  <section class="veins-offer">
     <div class="veins-offer-container">
       <div class="veins-offer-image">
         <img src="./assets/dis4.png" alt="Varicose Veins Legs">
       </div>
       <div class="veins-offer-content">
         <h2>Make Your Varicose Veins Legs<br><span>Comfortable Now!</span></h2>
-  
+
         <div class="veins-offer-prices">
           <p><span class="highlight">Single Leg:</span> 55,000/- Rs</p>
           <p><span class="highlight">Both Legs:</span> 75,000/- Rs</p>
         </div>
-  
+
         <div class="veins-offer-icons">
           <div class="icon-item">
             <img src="./assets/icon1.png" alt="No Cuts Icon">
@@ -1311,14 +1347,14 @@ nav ul li a:hover {
             <p>No Stitches</p>
           </div>
         </div>
-  
+
         <a href="#contact" class="veins-offer-btn">Book Consultation</a>
       </div>
     </div>
   </section>
 
   <!-- Major Insurances Accepted Section -->
-<section class="insurance-section">
+  <section class="insurance-section">
     <h2>Major Insurances Accepted</h2>
     <div class="insurance-logos">
       <div class="insurance-logo">
@@ -1346,13 +1382,11 @@ nav ul li a:hover {
   <section class="appointment-section" id="contact">
     <div class="appointment-container">
       <h2>Book an Appointment</h2>
-  
-      <form
-        id="bookingForm"
+
+      <form id="bookingForm"
         action="https://docs.google.com/forms/d/e/1FAIpQLSfcmcDJTJsRrcG9SUNCXOJH4_x2edclKkGKNsc5UHGyMrWNug/formResponse"
-        method="POST"
-        onsubmit="setTimeout(function(){ window.location='thank-you.html'; }, 500);">
-  
+        method="POST" onsubmit="setTimeout(function(){ window.location='thank-you.html'; }, 500);">
+
         <!-- Row 1: Name + Email -->
         <div class="form-row">
           <div class="form-group">
@@ -1365,7 +1399,7 @@ nav ul li a:hover {
           </div>
         </div>
         <br>
-  
+
         <!-- Row 2: Phone + Location -->
         <div class="form-row">
           <div class="form-group">
@@ -1378,7 +1412,7 @@ nav ul li a:hover {
           </div>
         </div>
         <br>
-  
+
         <!-- Row 3: Query -->
         <div class="form-row">
           <div class="form-group full-width">
@@ -1387,39 +1421,42 @@ nav ul li a:hover {
           </div>
         </div>
         <br>
-  
+
         <button type="submit" class="submit-button">Submit
         </button>
       </form>
     </div>
   </section>
-  
-  
-  
-  
-  
- 
 
-<!-- Patient Success Stories Section -->
-<section class="success-stories-section" id="testimonials">
+
+
+
+
+
+
+  <!-- Patient Success Stories Section -->
+  <section class="success-stories-section" id="testimonials">
     <h2>Our Patient's<br>Success Stories</h2>
     <div class="stories-container">
       <div class="story-card">
         <img src="./assets/avatar_1 1.png" alt="Pallem Lakshmi" class="story-avatar">
         <h3>Pallem Lakshmi</h3>
-        <p>Hospital maintains hygienic environment, staff members are good. Especially I thank nurses and supporting members to make me feel comfortable till final discharge. Doctor behaviour was very good.</p>
+        <p>Hospital maintains hygienic environment, staff members are good. Especially I thank nurses and supporting
+          members to make me feel comfortable till final discharge. Doctor behaviour was very good.</p>
       </div>
-  
+
       <div class="story-card">
         <img src="./assets/avatar_1 2.png" alt="Akula Venkat" class="story-avatar">
         <h3>Akula Venkat</h3>
-        <p>My father's varicose veins condition was very painful and we consulted a doctor about it. We are very happy to say that my father found relief from treatment as it was quick and easy!</p>
+        <p>My father's varicose veins condition was very painful and we consulted a doctor about it. We are very happy
+          to say that my father found relief from treatment as it was quick and easy!</p>
       </div>
-  
+
       <div class="story-card">
         <img src="./assets/avatar_1 3.png" alt="Nanduri Saroja" class="story-avatar">
         <h3>Nanduri Saroja</h3>
-        <p>Thank you Doctor for making my mother feel relaxed during the complete treatment process. Doctors, nurses, and staff were very kind and helpful throughout the process.</p>
+        <p>Thank you Doctor for making my mother feel relaxed during the complete treatment process. Doctors, nurses,
+          and staff were very kind and helpful throughout the process.</p>
       </div>
     </div>
   </section>
@@ -1428,17 +1465,18 @@ nav ul li a:hover {
   <section class="faq-section" style="background-color: #f0f0f0;" id="faq">
     <div class="faq-container">
       <div class="faq-heading">Frequently<br>Asked Questions</div>
-  
+
       <div class="faq-item">
         <div class="faq-box" onclick="toggleAnswer(this)">
           <p class="faq-question">1. What are the visible signs of unhealthy veins?</p>
           <img src="https://img.icons8.com/ios-filled/50/fa314a/expand-arrow--v1.png" class="faq-icon" alt="arrow" />
         </div>
         <div class="faq-answer">
-          <p>Unhealthy veins can look enlarged or bulging, with a twisted or knotted appearance. They’re usually dark in color and may be accompanied by aching or a heavy feeling in your legs.</p>
+          <p>Unhealthy veins can look enlarged or bulging, with a twisted or knotted appearance. They’re usually dark in
+            color and may be accompanied by aching or a heavy feeling in your legs.</p>
         </div>
       </div>
-  
+
       <div class="faq-item">
         <div class="faq-box" onclick="toggleAnswer(this)">
           <p class="faq-question">2. Are varicose veins more common in women?</p>
@@ -1449,17 +1487,18 @@ nav ul li a:hover {
           </p>
         </div>
       </div>
-  
+
       <div class="faq-item">
         <div class="faq-box" onclick="toggleAnswer(this)">
           <p class="faq-question">3. How do I know if I need varicose veins treatment?</p>
           <img src="https://img.icons8.com/ios-filled/50/fa314a/expand-arrow--v1.png" class="faq-icon" alt="arrow" />
         </div>
         <div class="faq-answer">
-          <p>If you experience pain, discomfort, or cosmetic concerns from varicose veins, it’s a good idea to see a veins specialist for a professional evaluation to determine if treatment is necessary.</p>
+          <p>If you experience pain, discomfort, or cosmetic concerns from varicose veins, it’s a good idea to see a
+            veins specialist for a professional evaluation to determine if treatment is necessary.</p>
         </div>
       </div>
-  
+
       <div class="faq-item">
         <div class="faq-box" onclick="toggleAnswer(this)">
           <p class="faq-question">4. Can varicose veins cause leg pain?</p>
@@ -1469,7 +1508,7 @@ nav ul li a:hover {
           <p>Yes, aching, burning, throbbing, or cramping in the legs are common symptoms.</p>
         </div>
       </div>
-  
+
       <div class="faq-item">
         <div class="faq-box" onclick="toggleAnswer(this)">
           <p class="faq-question">5. Who is at risk of developing varicose veins?</p>
@@ -1481,7 +1520,7 @@ nav ul li a:hover {
         </div>
       </div>
     </div>
-  
+
     <!-- Right side image -->
     <img src="assets/FAQ_1.png" alt="FAQ Woman" class="faq-image" />
   </section>
@@ -1502,18 +1541,14 @@ nav ul li a:hover {
         </div>
       </div>
     </div>
-    
+
     <div class="map-container">
-      <iframe
-        width="435"
-        height="410"
-        frameborder="0"
-        style="border:0; width: 100%; max-width: 835px; height: 410px;"
+      <iframe width="435" height="410" frameborder="0" style="border:0; width: 100%; max-width: 835px; height: 410px;"
         src="https://www.google.com/maps?q=Plot+2/C,+BK+Guda,+Sanjeeva+Reddy+Nagar,+Hyderabad,+Telangana+500033&output=embed"
         allowfullscreen>
       </iframe>
     </div>
-    
+
   </section>
 
   <footer>
@@ -1526,13 +1561,13 @@ nav ul li a:hover {
       <a href="#contact">Contact</a>
     </div>
     <div class="footer-bottom" style="display: flex; justify-content: space-around;">
-      © 2025 Mana Vascular Centre. All Rights Reserved. 
+      © 2025 Mana Vascular Centre. All Rights Reserved.
       <div>
-        <a href="#" style="color: white;">Privacy policy</a> | 
-      <a href="#" style="color: white;">Disclaimer</a> | 
-      <a href="#" style="color: white;">Contact</a>
+        <a href="#" style="color: white;">Privacy policy</a> |
+        <a href="#" style="color: white;">Disclaimer</a> |
+        <a href="#" style="color: white;">Contact</a>
       </div>
-      
+
     </div>
   </footer>
 
@@ -1544,10 +1579,10 @@ nav ul li a:hover {
     // This must be defined in global scope
     let submitted = false;
   </script>
-  
 
 
-  
+
+
   <script>
     function toggleAnswer(boxElement) {
       const answer = boxElement.nextElementSibling;
@@ -1563,57 +1598,57 @@ nav ul li a:hover {
 
 
 
-  
-  
-  
-  
-  
-  
-  
-  
 
-  
 
- 
-  
-  
-<script>
-  const faqBoxes = document.querySelectorAll('.faq-box');
 
-  faqBoxes.forEach(box => {
-    box.addEventListener('click', () => {
-      box.classList.toggle('active');
+
+
+
+
+
+
+
+
+
+
+
+  <script>
+    const faqBoxes = document.querySelectorAll('.faq-box');
+
+    faqBoxes.forEach(box => {
+      box.addEventListener('click', () => {
+        box.classList.toggle('active');
+      });
     });
-  });
-</script>
+  </script>
 
-  
-  
-  
+
+
+
 
   <script>
     const faqItems = document.querySelectorAll('.faq-item');
-    
+
     faqItems.forEach(item => {
       const question = item.querySelector('.faq-question');
       question.addEventListener('click', () => {
         item.classList.toggle('active');
       });
     });
-    </script>
-    
-  
+  </script>
+
+
 
   <script>
     const counters = document.querySelectorAll('.counter');
-    
+
     counters.forEach(counter => {
       counter.innerText = '0';
       const updateCounter = () => {
         const target = +counter.getAttribute('data-target');
         const count = +counter.innerText;
         const increment = target / 100; // Speed of counting
-    
+
         if (count < target) {
           counter.innerText = Math.ceil(count + increment);
           setTimeout(updateCounter, 30);
@@ -1623,18 +1658,20 @@ nav ul li a:hover {
       };
       updateCounter();
     });
-    </script>
-    
+  </script>
 
-    <script>
-        function openMenu() {
-            document.getElementById('mobileMenu').classList.add('show');
-        }
 
-        function closeMenu() {
-            document.getElementById('mobileMenu').classList.remove('show');
-        }
-    </script>
+
+
+  <script>
+    function openMenu() {
+      document.getElementById('mobileMenu').classList.add('show');
+    }
+
+    function closeMenu() {
+      document.getElementById('mobileMenu').classList.remove('show');
+    }
+  </script>
 
 </body>
 
